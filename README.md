@@ -17,38 +17,11 @@
 **Hackathon Goa (HH Goa) 2026 — Round 2 Official Submission**  
 *Built for real-time voice retrieval across Indian languages over the 55 GB `ai4bharat/MSMARCO-XI` dataset.*
 
-[Live Demo](https://astra-hh.vercel.app) • [Overview](#-executive-summary) • [Interface Showcase](#-live-interface-showcase) • [Benchmarks](#-audited-performance-benchmarks) • [Architecture](#-system-architecture) • [Chunking Innovations](#-the-5-strategy-indic-chunking-innovations) • [Voice Studio](#-multilingual-voice-studio--tts-engine) • [Guardrails](#-3-gate-anti-hallucination-guardrail-engine) • [Quickstart](#-reproducibility--quickstart)
+[Live Demo](https://astra-hh.vercel.app) • [Overview](#-executive-summary) • [Benchmarks](#-audited-performance-benchmarks) • [Architecture](#-system-architecture) • [Chunking Innovations](#-the-5-strategy-indic-chunking-innovations) • [Voice Studio](#-multilingual-voice-studio--tts-engine) • [Guardrails](#-3-gate-anti-hallucination-guardrail-engine) • [Quickstart](#-reproducibility--quickstart)
 
 ---
 
 </div>
-
-## 📸 Live Interface Showcase
-
-<div align="center">
-
-### 🌌 1. Multilingual Voice & Text Search Studio
-*Instant benchmark questions, real-time audio waveforms, and 6-GPU telemetry bar.*
-
-![Astra Hero UI](assets/ui_hero.png)
-
----
-
-### ⚡ 2. Grounded Hindi Synthesis with Citations & Audio Playback
-*85.3 ms sub-200ms retrieval, interactive `[1]` citation pill drawer, and 99.8% cross-encoder rerank confidence.*
-
-![Grounded Hindi Synthesis](assets/hindi_retrieval.png)
-
----
-
-### 🛡️ 3. Sub-Millisecond Gate 1 Security Defense
-*Instant 0.2 ms prompt injection defense before wasting any GPU compute cycles.*
-
-![Gate 1 Security Defense](assets/security_gate1.png)
-
-</div>
-
----
 
 ## 📌 Executive Summary
 
