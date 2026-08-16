@@ -5,6 +5,7 @@
 # 🌌 ASTRA
 ### Sub-200ms Voice-Enabled Multilingual Indic RAG Engine
 
+[![Live Web App](https://img.shields.io/badge/Live%20Demo-astra--hh.vercel.app-7928CA?style=for-the-badge&logo=vercel&logoColor=white)](https://astra-hh.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.4](https://img.shields.io/badge/PyTorch-2.4%20CUDA-ee4c2c.svg)](https://pytorch.org/)
@@ -16,7 +17,7 @@
 **Hackathon Goa (HH Goa) 2026 — Round 2 Official Submission**  
 *Built for real-time voice retrieval across Indian languages over the 55 GB `ai4bharat/MSMARCO-XI` dataset.*
 
-[Overview](#-executive-summary) • [Benchmarks](#-audited-performance-benchmarks) • [Architecture](#-system-architecture) • [Chunking Innovations](#-the-5-strategy-indic-chunking-innovations) • [Guardrails](#-3-gate-anti-hallucination-guardrail-engine) • [Quickstart](#-reproducibility--quickstart) • [Video Demo](DEMO_SCRIPT.md)
+[Live Demo](https://astra-hh.vercel.app) • [Overview](#-executive-summary) • [Benchmarks](#-audited-performance-benchmarks) • [Architecture](#-system-architecture) • [Chunking Innovations](#-the-5-strategy-indic-chunking-innovations) • [Voice Studio](#-multilingual-voice-studio--tts-engine) • [Guardrails](#-3-gate-anti-hallucination-guardrail-engine) • [Quickstart](#-reproducibility--quickstart) • [Video Demo](DEMO_SCRIPT.md)
 
 ---
 
@@ -129,6 +130,17 @@ Rather than relying on a single naive text split, Astra implements **5 specializ
 
 ---
 
+## 🎙️ Multilingual Voice Studio & TTS Engine
+
+Astra features a built-in **bidirectional Voice Interface** supporting Hindi, Marathi, Bengali, Telugu, Tamil, and English:
+
+* **Real-time Speech Recognition (STT):** Automatic script-aware speech recognition with live synthetic equalizer feedback, continuous stream listening, and zero hardware device conflicts.
+* **Hardware-Accelerated TTS Synthesizer:** Reads out synthesized answers in the native language accent. Automatically strips bracketed citation numbers (e.g. `[1]`, `[2]`) before reading for natural conversational flow.
+* **Garbage-Collection Resilience:** Pinned utterance references preventing Chromium speech synthesizer stalls.
+* **Variable Playback Speed:** Adjustable voice rate controls (`0.8x`, `1.0x`, `1.2x`, `1.5x`) with instant play/pause/resume.
+
+---
+
 ## 🎛️ Hardware Topology & Memory Budget
 
 Astra is architected to utilize **all 6× NVIDIA RTX 2080 Ti GPUs** and **512 GB Host RAM** efficiently:
@@ -170,9 +182,9 @@ Astra enforces strict safety and grounding through a sequential 3-Gate verificat
                │ Top-3 Chunks
                ▼
 ┌───────────────────────────────┐
-│ GATE 2: Centroid Relevance    │ ──► [SCORE < 0.20] ──► 🛡️ "Query out-of-domain. Refusing to guess."
+│ GATE 2: Centroid Relevance    │ ──► [SCORE < 0.04] ──► 🛡️ "Query out-of-domain. Refusing to guess."
 └──────────────┬────────────────┘
-               │ Confidence >= 0.20
+               │ Confidence >= 0.04
                ▼
 ┌───────────────────────────────┐
 │ LLM SYNTHESIS & CITATIONS     │
@@ -193,7 +205,7 @@ Astra enforces strict safety and grounding through a sequential 3-Gate verificat
    *Result:* `🛑 Refusal: Blocked safety pattern detected ('ignore all instructions')` — Execution time: `0.4ms`.
 2. **Out-of-Domain / Gibberish Attempt:**  
    *Query:* `"xyzzy 99999 invalid quantum alien query"`  
-   *Result:* `🛡️ Refusal: Query out-of-domain (relevance confidence 0.00 < threshold 0.20)` — Prevents hallucination.
+   *Result:* `🛡️ Refusal: Query out-of-domain (relevance confidence 0.00 < threshold 0.04)` — Prevents hallucination.
 3. **Grounded Factuality:**  
    *Query:* `"कंप्यूटर ऑपरेटिंग सिस्टम क्या है?"` (Hindi)  
    *Result:* Answers factually and explicitly cites `[1]`, directly linking to MSMARCO passage #1.
@@ -258,6 +270,11 @@ Astra-HH/
 ├── api/
 │   ├── __init__.py
 │   └── main.py                   # FastAPI server (/query, /health, /ws, Web mount)
+├── frontend/                     # Modern React 18 + Vite + Tailwind + TTS Studio
+│   ├── src/
+│   │   ├── components/           # VoiceStudio, FlowHero, MultilingualAudioPlayer
+│   │   └── App.tsx               # Real-time Telemetry & Search App
+│   └── package.json
 ├── rag_engine/
 │   ├── __init__.py
 │   ├── chunking/                 # 5 Indic Chunking Strategies
