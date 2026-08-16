@@ -1,7 +1,7 @@
 [
   {
-    "originalUrl": "https://flow.stephenhung.me/favicon.svg",
-    "localPath": "E:\\ASTRA- HH-2\\reference\\flow-stephenhung\\flow-stephenhung-me\\assets\\images\\21bc0b86-favicon.svg",
+    "originalUrl": "https://flow.design-system.local/favicon.svg",
+    "localPath": "E:\\ASTRA- HH-2\\reference\\flow-ui-reference\\flow-design-system\\assets\\images\\21bc0b86-favicon.svg",
     "type": "image",
     "bytes": 694,
     "mime": "image/svg+xml",
@@ -11,7 +11,7 @@
   },
   {
     "originalUrl": "https://fonts.gstatic.com/s/spacemono/v17/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ.woff2",
-    "localPath": "E:\\ASTRA- HH-2\\reference\\flow-stephenhung\\flow-stephenhung-me\\assets\\fonts\\39187352-i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ.woff2",
+    "localPath": "E:\\ASTRA- HH-2\\reference\\flow-ui-reference\\flow-design-system\\assets\\fonts\\39187352-i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ.woff2",
     "type": "font",
     "bytes": 9464,
     "mime": "font/woff2",

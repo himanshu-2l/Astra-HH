@@ -1,10 +1,10 @@
 # REBUILD.md
 
-> Auto-generated rebuild brief for **https://flow.stephenhung.me/** (captured 2026-08-17T14:37:28.456Z)
+> Design reference brief for **Flow Design System** (captured 2026-08-17T14:37:28.456Z)
 
 ## What you're rebuilding
 
-- **Source**: https://flow.stephenhung.me/
+- **Source**: Flow Design System
 - **Page title**: flow | voice-guided 3d exploration
 - **Detected stack**: three.js
 - **Recommended stack**: Next.js (App Router) + TypeScript + Tailwind CSS + Motion (framer-motion) + react-three-fiber
@@ -15,7 +15,7 @@
 ## Reference folder layout
 
 ```
-reference/flow-stephenhung-me/
+reference/flow-ui-reference/flow-design-system/
 ├── meta.json                  # this capture's metadata
 ├── REBUILD.md                 # ← you are here
 ├── dom/full.html              # complete inlined dom
