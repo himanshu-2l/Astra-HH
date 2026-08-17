@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { X, Sparkles, Zap, Globe, ArrowRight } from 'lucide-react';
 import { SupportedLanguage } from '../../types';
 
@@ -54,6 +54,18 @@ export const FlowBenchmarkModal: React.FC<FlowBenchmarkModalProps> = ({
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedLangFilter, setSelectedLangFilter] = useState<string>('All');
+  const modalCardRef = useRef<HTMLDivElement | null>(null);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -75,19 +87,29 @@ export const FlowBenchmarkModal: React.FC<FlowBenchmarkModalProps> = ({
   });
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md animate-fadeIn">
-      <div className="relative w-full max-w-2xl rounded-3xl bg-[#060b19]/95 backdrop-blur-3xl border border-white/20 p-6 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.9)] text-white space-y-6 max-h-[85vh] flex flex-col">
-        {/* Header */}
-        <div className="flex items-center justify-between pb-3 border-b border-white/10 shrink-0">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center">
-              <Zap className="w-4 h-4 text-cyan-400 animate-pulse" />
+    <div
+      className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6 animate-fadeIn"
+      onClick={(e) => {
+        if (modalCardRef.current && !modalCardRef.current.contains(e.target as Node)) {
+          onClose();
+        }
+      }}
+    >
+      <div
+        ref={modalCardRef}
+        className="relative w-full max-w-2xl my-auto rounded-3xl bg-[#070c18]/96 backdrop-blur-2xl border border-slate-700/80 p-5 sm:p-7 shadow-[0_25px_60px_rgba(0,0,0,0.95)] text-white flex flex-col max-h-[82vh] overflow-hidden"
+      >
+        {/* 1. Sticky Header with Clear Close Button */}
+        <div className="flex items-center justify-between pb-3.5 border-b border-slate-700/80 shrink-0">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-2xl bg-cyan-500/10 border border-cyan-400/30 flex items-center justify-center shadow-inner">
+              <Zap className="w-5 h-5 text-cyan-400 animate-pulse" />
             </div>
             <div>
-              <h3 className="text-base md:text-lg font-bold font-sans">
+              <h3 className="text-base sm:text-lg font-bold font-sans text-white">
                 Benchmark Question Library
               </h3>
-              <p className="text-xs font-mono text-white/50">
+              <p className="text-xs font-mono text-slate-400">
                 18 Curated Multilingual Indic Evaluations
               </p>
             </div>
@@ -95,25 +117,26 @@ export const FlowBenchmarkModal: React.FC<FlowBenchmarkModalProps> = ({
 
           <button
             onClick={onClose}
-            className="p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/70 hover:text-white transition-all cursor-pointer"
+            className="p-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-all cursor-pointer border border-slate-700/60 shadow-md"
+            title="Close (Esc)"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Filters */}
-        <div className="space-y-3 shrink-0">
+        {/* 2. Filters Section (Language & Category) */}
+        <div className="py-3 space-y-2.5 border-b border-slate-800 shrink-0">
           {/* Language Filter */}
-          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1">
-            <Globe className="w-3.5 h-3.5 text-white/40 shrink-0 mr-1" />
+          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5">
+            <Globe className="w-3.5 h-3.5 text-slate-400 shrink-0 mr-1" />
             {langFilters.map((lf) => (
               <button
                 key={lf.code}
                 onClick={() => setSelectedLangFilter(lf.code)}
                 className={`px-3 py-1 rounded-full text-xs font-mono transition-all shrink-0 cursor-pointer ${
                   selectedLangFilter === lf.code
-                    ? 'bg-white text-black font-bold shadow-md scale-105'
-                    : 'bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10'
+                    ? 'bg-cyan-400 text-black font-bold shadow-[0_0_12px_rgba(6,182,212,0.4)] scale-105 border border-cyan-300'
+                    : 'bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/60'
                 }`}
               >
                 {lf.name}
@@ -123,15 +146,15 @@ export const FlowBenchmarkModal: React.FC<FlowBenchmarkModalProps> = ({
 
           {/* Category Filter */}
           <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400 shrink-0 mr-1" />
+            <Sparkles className="w-3.5 h-3.5 text-purple-400 shrink-0 mr-1" />
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-3 py-1 rounded-full text-xs font-mono transition-all shrink-0 cursor-pointer ${
                   selectedCategory === cat
-                    ? 'bg-purple-600 text-white font-bold shadow-glow-purple scale-105 border border-purple-400'
-                    : 'bg-white/5 hover:bg-white/10 text-white/60 hover:text-white border border-white/10'
+                    ? 'bg-purple-600 text-white font-bold shadow-[0_0_12px_rgba(168,85,247,0.4)] scale-105 border border-purple-400'
+                    : 'bg-slate-900/90 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-700/60'
                 }`}
               >
                 {cat}
@@ -140,8 +163,8 @@ export const FlowBenchmarkModal: React.FC<FlowBenchmarkModalProps> = ({
           </div>
         </div>
 
-        {/* Questions Grid */}
-        <div className="overflow-y-auto pr-1 space-y-2.5 flex-1">
+        {/* 3. Scrollable Questions List */}
+        <div className="overflow-y-auto pr-1 pt-3 space-y-2.5 flex-1 min-h-0 no-scrollbar">
           {filteredQuestions.map((q, idx) => (
             <div
               key={idx}
@@ -149,30 +172,39 @@ export const FlowBenchmarkModal: React.FC<FlowBenchmarkModalProps> = ({
                 onSelectPrompt(q.text, q.lang);
                 onClose();
               }}
-              className="p-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/30 transition-all cursor-pointer group flex items-center justify-between gap-3"
+              className="p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800/90 border border-slate-700/60 hover:border-cyan-500/60 transition-all cursor-pointer group flex items-center justify-between gap-3 shadow-md"
             >
               <div className="space-y-1 min-w-0">
                 <div className="flex items-center gap-2 font-mono text-[10px]">
-                  <span className="px-2 py-0.5 rounded-full bg-white/15 text-cyan-300 font-bold uppercase">
+                  <span className="px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 font-bold uppercase border border-cyan-500/40">
                     {q.lang}
                   </span>
-                  <span className="text-white/40">{q.category}</span>
-                  <span className="text-white/60 font-bold">• {q.label}</span>
+                  <span className="text-slate-400">{q.category}</span>
+                  <span className="text-slate-300 font-bold">• {q.label}</span>
                 </div>
-                <p className="text-xs sm:text-sm text-white/90 font-sans truncate group-hover:text-white">
+                <p className="text-xs sm:text-sm text-slate-100 font-sans truncate group-hover:text-cyan-200 transition-colors">
                   {q.text}
                 </p>
               </div>
 
-              <div className="w-8 h-8 rounded-full bg-white/5 group-hover:bg-white text-white/40 group-hover:text-black flex items-center justify-center transition-all shrink-0">
+              <div className="w-8 h-8 rounded-full bg-slate-800 group-hover:bg-cyan-400 text-slate-400 group-hover:text-black flex items-center justify-center transition-all shrink-0 border border-slate-700/60 group-hover:border-cyan-300 shadow-sm">
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </div>
           ))}
 
           {filteredQuestions.length === 0 && (
-            <div className="py-8 text-center text-xs font-mono text-white/40">
-              No questions found for the selected filters.
+            <div className="py-12 text-center text-xs font-mono text-slate-400 space-y-1">
+              <p>No questions found for the selected filters.</p>
+              <button
+                onClick={() => {
+                  setSelectedCategory('All');
+                  setSelectedLangFilter('All');
+                }}
+                className="text-cyan-400 hover:underline cursor-pointer pt-1"
+              >
+                Reset filters
+              </button>
             </div>
           )}
         </div>
