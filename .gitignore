@@ -1,0 +1,35 @@
+# Ignore plan material folder per user instruction
+plan material/
+"plan material/"
+
+# Python virtual environment & cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+astra_env/
+
+# Large raw datasets and binary models (do not push to GitHub)
+data/raw/
+data/chunks/
+data/embeddings/
+data/indices/
+
+# Keep the benchmark proof CSV!
+!data/benchmarks/latency_log.csv
+
+# Frontend build & dependencies
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+.vite/
+
+# Logs & OS artifacts
+*.log
+.DS_Store
+Thumbs.db
+cloudflared
