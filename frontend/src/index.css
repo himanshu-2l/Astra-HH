@@ -28,6 +28,17 @@
   }
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .glass-panel {
   @apply bg-obsidian-900/80 backdrop-blur-xl border border-slate-800/80 rounded-2xl shadow-xl transition-all duration-300;
 }
@@ -38,4 +49,64 @@
 
 .glass-card {
   @apply bg-obsidian-950/70 border border-slate-800/60 rounded-xl transition-all duration-200;
+}
+
+@keyframes canvasIntro {
+  0% {
+    transform: scale(1.15);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes flip {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) rotateX(45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) rotateX(0deg);
+  }
+}
+
+.animate-flip {
+  animation: flip 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

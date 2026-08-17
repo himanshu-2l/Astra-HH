@@ -1,0 +1,342 @@
+[
+  {
+    "name": "--void",
+    "value": "#1b1b1b",
+    "source": "root"
+  },
+  {
+    "name": "--bg",
+    "value": "#1b1b1b",
+    "source": "root"
+  },
+  {
+    "name": "--radius",
+    "value": ".625rem",
+    "source": "root"
+  },
+  {
+    "name": "--background",
+    "value": "oklch(100% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--foreground",
+    "value": "oklch(14.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--card",
+    "value": "oklch(100% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--card-foreground",
+    "value": "oklch(14.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--popover",
+    "value": "oklch(100% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--popover-foreground",
+    "value": "oklch(14.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--primary",
+    "value": "oklch(20.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--primary-foreground",
+    "value": "oklch(98.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--secondary",
+    "value": "oklch(97% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--secondary-foreground",
+    "value": "oklch(20.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--muted",
+    "value": "oklch(97% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--muted-foreground",
+    "value": "oklch(55.6% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--accent",
+    "value": "oklch(97% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--accent-foreground",
+    "value": "oklch(20.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--destructive",
+    "value": "oklch(57.7% .245 27.325)",
+    "source": "root"
+  },
+  {
+    "name": "--border",
+    "value": "oklch(92.2% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--input",
+    "value": "oklch(92.2% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--ring",
+    "value": "oklch(70.8% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--chart-1",
+    "value": "oklch(64.6% .222 41.116)",
+    "source": "root"
+  },
+  {
+    "name": "--chart-2",
+    "value": "oklch(60% .118 184.704)",
+    "source": "root"
+  },
+  {
+    "name": "--chart-3",
+    "value": "oklch(39.8% .07 227.392)",
+    "source": "root"
+  },
+  {
+    "name": "--chart-4",
+    "value": "oklch(82.8% .189 84.429)",
+    "source": "root"
+  },
+  {
+    "name": "--chart-5",
+    "value": "oklch(76.9% .188 70.08)",
+    "source": "root"
+  },
+  {
+    "name": "--sidebar",
+    "value": "oklch(98.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--sidebar-foreground",
+    "value": "oklch(14.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--sidebar-primary",
+    "value": "oklch(20.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--sidebar-primary-foreground",
+    "value": "oklch(98.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--sidebar-accent",
+    "value": "oklch(97% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--sidebar-accent-foreground",
+    "value": "oklch(20.5% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--sidebar-border",
+    "value": "oklch(92.2% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--sidebar-ring",
+    "value": "oklch(70.8% 0 0)",
+    "source": "root"
+  },
+  {
+    "name": "--void",
+    "value": "#1b1b1b",
+    "source": "html"
+  },
+  {
+    "name": "--bg",
+    "value": "#1b1b1b",
+    "source": "html"
+  },
+  {
+    "name": "--radius",
+    "value": ".625rem",
+    "source": "html"
+  },
+  {
+    "name": "--background",
+    "value": "oklch(100% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--foreground",
+    "value": "oklch(14.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--card",
+    "value": "oklch(100% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--card-foreground",
+    "value": "oklch(14.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--popover",
+    "value": "oklch(100% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--popover-foreground",
+    "value": "oklch(14.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--primary",
+    "value": "oklch(20.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--primary-foreground",
+    "value": "oklch(98.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--secondary",
+    "value": "oklch(97% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--secondary-foreground",
+    "value": "oklch(20.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--muted",
+    "value": "oklch(97% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--muted-foreground",
+    "value": "oklch(55.6% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--accent",
+    "value": "oklch(97% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--accent-foreground",
+    "value": "oklch(20.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--destructive",
+    "value": "oklch(57.7% .245 27.325)",
+    "source": "html"
+  },
+  {
+    "name": "--border",
+    "value": "oklch(92.2% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--input",
+    "value": "oklch(92.2% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--ring",
+    "value": "oklch(70.8% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--chart-1",
+    "value": "oklch(64.6% .222 41.116)",
+    "source": "html"
+  },
+  {
+    "name": "--chart-2",
+    "value": "oklch(60% .118 184.704)",
+    "source": "html"
+  },
+  {
+    "name": "--chart-3",
+    "value": "oklch(39.8% .07 227.392)",
+    "source": "html"
+  },
+  {
+    "name": "--chart-4",
+    "value": "oklch(82.8% .189 84.429)",
+    "source": "html"
+  },
+  {
+    "name": "--chart-5",
+    "value": "oklch(76.9% .188 70.08)",
+    "source": "html"
+  },
+  {
+    "name": "--sidebar",
+    "value": "oklch(98.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--sidebar-foreground",
+    "value": "oklch(14.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--sidebar-primary",
+    "value": "oklch(20.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--sidebar-primary-foreground",
+    "value": "oklch(98.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--sidebar-accent",
+    "value": "oklch(97% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--sidebar-accent-foreground",
+    "value": "oklch(20.5% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--sidebar-border",
+    "value": "oklch(92.2% 0 0)",
+    "source": "html"
+  },
+  {
+    "name": "--sidebar-ring",
+    "value": "oklch(70.8% 0 0)",
+    "source": "html"
+  }
+]

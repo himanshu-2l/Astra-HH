@@ -1,0 +1,60 @@
+{
+  "spacing": [
+    {
+      "value": "16px",
+      "usage": 17
+    },
+    {
+      "value": "8px",
+      "usage": 15
+    },
+    {
+      "value": "32px",
+      "usage": 7
+    },
+    {
+      "value": "24px",
+      "usage": 5
+    },
+    {
+      "value": "12px",
+      "usage": 4
+    },
+    {
+      "value": "10px",
+      "usage": 4
+    },
+    {
+      "value": "20px",
+      "usage": 4
+    },
+    {
+      "value": "128px",
+      "usage": 1
+    },
+    {
+      "value": "48px",
+      "usage": 1
+    },
+    {
+      "value": "6px",
+      "usage": 1
+    }
+  ],
+  "radii": [
+    {
+      "value": "3.35544e+07px",
+      "usage": 8
+    }
+  ],
+  "shadows": [
+    {
+      "value": "rgba(0, 0, 0, 0.3) 0px 8px 32px 0px, rgba(255, 255, 255, 0.2) 0px 0px 40px 0px, rgba(255, 255, 255, 0.3) 0px 1px 0px 0px inset",
+      "usage": 4
+    },
+    {
+      "value": "rgba(0, 0, 0, 0.4) 0px 8px 32px 0px, rgba(255, 255, 255, 0.25) 0px 0px 50px 0px, rgba(255, 255, 255, 0.4) 0px 1px 0px 0px inset",
+      "usage": 2
+    }
+  ]
+}

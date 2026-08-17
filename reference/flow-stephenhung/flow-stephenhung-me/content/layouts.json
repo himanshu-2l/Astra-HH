@@ -1,0 +1,2257 @@
+[
+  {
+    "slug": "01-homelibrarysign-inbuilt-with-reactthree-",
+    "layout": {
+      "tag": "div",
+      "classes": [],
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      },
+      "display": "block",
+      "position": "static",
+      "zIndex": "auto",
+      "children": [
+        {
+          "tag": "div",
+          "classes": [
+            "h-screen",
+            "w-screen",
+            "overflow-hidden",
+            "relative"
+          ],
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844
+          },
+          "display": "block",
+          "position": "relative",
+          "zIndex": "auto",
+          "children": [
+            {
+              "tag": "canvas",
+              "classes": [
+                "fixed",
+                "inset-0",
+                "w-full",
+                "h-full"
+              ],
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 844
+              },
+              "display": "block",
+              "position": "fixed",
+              "zIndex": "0",
+              "children": [],
+              "overflow": "clip"
+            },
+            {
+              "tag": "div",
+              "classes": [
+                "fixed",
+                "inset-0",
+                "pointer-events-none"
+              ],
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 844
+              },
+              "display": "block",
+              "position": "fixed",
+              "zIndex": "1",
+              "children": [],
+              "bgImage": "radial-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.9) 100%)",
+              "gradient": {
+                "kind": "radial",
+                "stops": [
+                  {
+                    "color": "rgba(0"
+                  },
+                  {
+                    "color": "0"
+                  },
+                  {
+                    "color": "0"
+                  },
+                  {
+                    "color": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "tag": "div",
+              "classes": [
+                "relative",
+                "z-10",
+                "h-full",
+                "flex",
+                "flex-col"
+              ],
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 844
+              },
+              "display": "flex",
+              "position": "relative",
+              "zIndex": "10",
+              "children": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "mb-4"
+                  ],
+                  "bbox": {
+                    "x": -189,
+                    "y": 128,
+                    "width": 768,
+                    "height": 104
+                  },
+                  "display": "block",
+                  "position": "static",
+                  "zIndex": "auto",
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "flex",
+                        "flex-col",
+                        "items-center",
+                        "mb-8"
+                      ],
+                      "bbox": {
+                        "x": -189,
+                        "y": 128,
+                        "width": 768,
+                        "height": 72
+                      },
+                      "display": "flex",
+                      "position": "static",
+                      "zIndex": "auto",
+                      "children": [
+                        {
+                          "tag": "p",
+                          "classes": [
+                            "font-mono",
+                            "text-xs",
+                            "text-white/40",
+                            "text-glow",
+                            "mb-4"
+                          ],
+                          "bbox": {
+                            "x": 148,
+                            "y": 128,
+                            "width": 94,
+                            "height": 16
+                          },
+                          "display": "block",
+                          "position": "static",
+                          "zIndex": "auto",
+                          "children": [],
+                          "isText": true,
+                          "textPreview": "built with:",
+                          "fontSize": "12px",
+                          "fontWeight": "400",
+                          "fontFamily": "\"Space Mono\", monospace",
+                          "lineHeight": "16px",
+                          "letterSpacing": "1.2px",
+                          "textTransform": "lowercase",
+                          "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)",
+                          "margin": "0px 0px 16px 0px"
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "flex",
+                            "gap-8",
+                            "animate-scroll",
+                            "h-full",
+                            "items-center"
+                          ],
+                          "bbox": {
+                            "x": -393,
+                            "y": 160,
+                            "width": 768,
+                            "height": 40
+                          },
+                          "display": "flex",
+                          "position": "static",
+                          "zIndex": "auto",
+                          "children": [
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": -393,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "svg",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": -393,
+                                    "y": 169,
+                                    "width": 22,
+                                    "height": 22
+                                  },
+                                  "display": "block",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [
+                                    {
+                                      "tag": "path",
+                                      "classes": [],
+                                      "bbox": {
+                                        "x": -393,
+                                        "y": 170,
+                                        "width": 22,
+                                        "height": 20
+                                      },
+                                      "display": "inline",
+                                      "position": "static",
+                                      "zIndex": "auto",
+                                      "children": [],
+                                      "cursor": "pointer"
+                                    }
+                                  ],
+                                  "isImage": true,
+                                  "overflow": "hidden",
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": -398,
+                                    "y": 201,
+                                    "width": 32,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "React",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": -339,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": -339,
+                                    "y": 168,
+                                    "width": 22,
+                                    "height": 22
+                                  },
+                                  "display": "inline",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [],
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": -354,
+                                    "y": 201,
+                                    "width": 52,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "Three.js",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": -285,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": -285,
+                                    "y": 169,
+                                    "width": 22,
+                                    "height": 22
+                                  },
+                                  "display": "inline",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [],
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": -306,
+                                    "y": 201,
+                                    "width": 64,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "TypeScript",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": -231,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": -231,
+                                    "y": 169,
+                                    "width": 22,
+                                    "height": 22
+                                  },
+                                  "display": "inline",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [],
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": -233,
+                                    "y": 201,
+                                    "width": 26,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "Vite",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": -177,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "svg",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": -177,
+                                    "y": 169,
+                                    "width": 22,
+                                    "height": 22
+                                  },
+                                  "display": "block",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [
+                                    {
+                                      "tag": "path",
+                                      "classes": [],
+                                      "bbox": {
+                                        "x": -177,
+                                        "y": 173,
+                                        "width": 22,
+                                        "height": 13
+                                      },
+                                      "display": "inline",
+                                      "position": "static",
+                                      "zIndex": "auto",
+                                      "children": [],
+                                      "cursor": "pointer"
+                                    }
+                                  ],
+                                  "isImage": true,
+                                  "overflow": "hidden",
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": -205,
+                                    "y": 201,
+                                    "width": 77,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "Tailwind CSS",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": -123,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "svg",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": -123,
+                                    "y": 169,
+                                    "width": 22,
+                                    "height": 22
+                                  },
+                                  "display": "block",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [
+                                    {
+                                      "tag": "path",
+                                      "classes": [],
+                                      "bbox": {
+                                        "x": -121,
+                                        "y": 169,
+                                        "width": 18,
+                                        "height": 22
+                                      },
+                                      "display": "inline",
+                                      "position": "static",
+                                      "zIndex": "auto",
+                                      "children": [],
+                                      "cursor": "pointer"
+                                    }
+                                  ],
+                                  "isImage": true,
+                                  "overflow": "hidden",
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": -138,
+                                    "y": 201,
+                                    "width": 52,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "Firebase",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": -69,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": -69,
+                                    "y": 169,
+                                    "width": 21,
+                                    "height": 22
+                                  },
+                                  "display": "inline",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [],
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": -87,
+                                    "y": 201,
+                                    "width": 58,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "Gemini AI",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": -15,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "svg",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": -15,
+                                    "y": 169,
+                                    "width": 22,
+                                    "height": 22
+                                  },
+                                  "display": "block",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [
+                                    {
+                                      "tag": "path",
+                                      "classes": [],
+                                      "bbox": {
+                                        "x": -9,
+                                        "y": 169,
+                                        "width": 10,
+                                        "height": 22
+                                      },
+                                      "display": "inline",
+                                      "position": "static",
+                                      "zIndex": "auto",
+                                      "children": [],
+                                      "cursor": "pointer"
+                                    }
+                                  ],
+                                  "isImage": true,
+                                  "overflow": "hidden",
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": -27,
+                                    "y": 201,
+                                    "width": 45,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "MongoDB",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": 39,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "svg",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": 39,
+                                    "y": 169,
+                                    "width": 22,
+                                    "height": 22
+                                  },
+                                  "display": "block",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [
+                                    {
+                                      "tag": "path",
+                                      "classes": [],
+                                      "bbox": {
+                                        "x": 39,
+                                        "y": 170,
+                                        "width": 22,
+                                        "height": 19
+                                      },
+                                      "display": "inline",
+                                      "position": "static",
+                                      "zIndex": "auto",
+                                      "children": [],
+                                      "cursor": "pointer"
+                                    }
+                                  ],
+                                  "isImage": true,
+                                  "overflow": "hidden",
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": 34,
+                                    "y": 201,
+                                    "width": 32,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "Vultr",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": 93,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "svg",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": 93,
+                                    "y": 169,
+                                    "width": 22,
+                                    "height": 22
+                                  },
+                                  "display": "block",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [
+                                    {
+                                      "tag": "path",
+                                      "classes": [],
+                                      "bbox": {
+                                        "x": 93,
+                                        "y": 170,
+                                        "width": 22,
+                                        "height": 19
+                                      },
+                                      "display": "inline",
+                                      "position": "static",
+                                      "zIndex": "auto",
+                                      "children": [],
+                                      "cursor": "pointer"
+                                    }
+                                  ],
+                                  "isImage": true,
+                                  "overflow": "hidden",
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": 85,
+                                    "y": 201,
+                                    "width": 39,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "Vercel",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": 147,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": 147,
+                                    "y": 169,
+                                    "width": 22,
+                                    "height": 22
+                                  },
+                                  "display": "inline",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [],
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": 129,
+                                    "y": 201,
+                                    "width": 58,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "Socket.IO",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "text-white/50",
+                                "hover:text-white",
+                                "transition-all",
+                                "duration-300",
+                                "group"
+                              ],
+                              "bbox": {
+                                "x": 201,
+                                "y": 169,
+                                "width": 22,
+                                "height": 22
+                              },
+                              "display": "block",
+                              "position": "relative",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "svg",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": 201,
+                                    "y": 169,
+                                    "width": 22,
+                                    "height": 22
+                                  },
+                                  "display": "block",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [
+                                    {
+                                      "tag": "path",
+                                      "classes": [],
+                                      "bbox": {
+                                        "x": 203,
+                                        "y": 170,
+                                        "width": 18,
+                                        "height": 18
+                                      },
+                                      "display": "inline",
+                                      "position": "static",
+                                      "zIndex": "auto",
+                                      "children": [],
+                                      "cursor": "pointer"
+                                    }
+                                  ],
+                                  "isImage": true,
+                                  "overflow": "hidden",
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "absolute",
+                                    "top-8",
+                                    "left-1/2",
+                                    "-translate-x-1/2",
+                                    "opacity-0"
+                                  ],
+                                  "bbox": {
+                                    "x": 180,
+                                    "y": 201,
+                                    "width": 64,
+                                    "height": 15
+                                  },
+                                  "display": "block",
+                                  "position": "absolute",
+                                  "zIndex": "20",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "World Labs",
+                                  "fontSize": "10px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "15px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+                                  "opacity": "0",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "filter": "grayscale(1)",
+                              "cursor": "pointer"
+                            }
+                          ],
+                          "flexDirection": "row",
+                          "justifyContent": "normal",
+                          "alignItems": "center",
+                          "gap": "32px",
+                          "transform": "matrix(1, 0, 0, 1, -203.998, 0)"
+                        }
+                      ],
+                      "flexDirection": "column",
+                      "justifyContent": "normal",
+                      "alignItems": "center",
+                      "gap": "normal",
+                      "margin": "0px 0px 32px 0px"
+                    }
+                  ],
+                  "margin": "0px 0px 16px 0px"
+                },
+                {
+                  "tag": "div",
+                  "classes": [
+                    "text-center",
+                    "max-w-3xl"
+                  ],
+                  "bbox": {
+                    "x": -41,
+                    "y": 248,
+                    "width": 472,
+                    "height": 341
+                  },
+                  "display": "block",
+                  "position": "static",
+                  "zIndex": "auto",
+                  "children": [
+                    {
+                      "tag": "h1",
+                      "classes": [
+                        "font-display",
+                        "text-7xl",
+                        "md:text-9xl",
+                        "leading-tight",
+                        "text-stroke"
+                      ],
+                      "bbox": {
+                        "x": -41,
+                        "y": 248,
+                        "width": 472,
+                        "height": 90
+                      },
+                      "display": "block",
+                      "position": "static",
+                      "zIndex": "auto",
+                      "children": [
+                        {
+                          "tag": "span",
+                          "classes": [],
+                          "bbox": {
+                            "x": 78,
+                            "y": 239,
+                            "width": 234,
+                            "height": 107
+                          },
+                          "display": "inline",
+                          "position": "static",
+                          "zIndex": "auto",
+                          "children": [],
+                          "isText": true,
+                          "textPreview": "flow",
+                          "fontSize": "72px",
+                          "fontWeight": "400",
+                          "fontFamily": "\"Space Mono\", monospace",
+                          "lineHeight": "90px",
+                          "letterSpacing": "14.4px",
+                          "textTransform": "lowercase",
+                          "color": "rgba(0, 0, 0, 0)"
+                        }
+                      ],
+                      "filter": "drop-shadow(rgba(255, 255, 255, 0.4) 0px 0px 15px) drop-shadow(rgba(255, 255, 255, 0.3) 0px 0px 30px) drop-shadow(rgba(0, 0, 0, 0.6) 0px 4px 8px)"
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "mt-3",
+                        "text-sm",
+                        "md:text-base",
+                        "text-white/80",
+                        "max-w-xl"
+                      ],
+                      "bbox": {
+                        "x": -41,
+                        "y": 350,
+                        "width": 472,
+                        "height": 21
+                      },
+                      "display": "block",
+                      "position": "static",
+                      "zIndex": "auto",
+                      "children": [
+                        {
+                          "tag": "span",
+                          "classes": [],
+                          "bbox": {
+                            "x": 139,
+                            "y": 349,
+                            "width": 112,
+                            "height": 21
+                          },
+                          "display": "inline",
+                          "position": "static",
+                          "zIndex": "auto",
+                          "children": []
+                        }
+                      ],
+                      "margin": "12px 0px 0px 0px"
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "mt-8",
+                        "flex",
+                        "items-center",
+                        "justify-center",
+                        "gap-3"
+                      ],
+                      "bbox": {
+                        "x": -41,
+                        "y": 403,
+                        "width": 472,
+                        "height": 42
+                      },
+                      "display": "flex",
+                      "position": "relative",
+                      "zIndex": "20",
+                      "children": [
+                        {
+                          "tag": "button",
+                          "classes": [
+                            "glass",
+                            "rounded-full",
+                            "px-5",
+                            "py-2.5",
+                            "text-sm"
+                          ],
+                          "bbox": {
+                            "x": 83,
+                            "y": 403,
+                            "width": 110,
+                            "height": 42
+                          },
+                          "display": "flex",
+                          "position": "static",
+                          "zIndex": "auto",
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "classes": [],
+                              "bbox": {
+                                "x": 104,
+                                "y": 416,
+                                "width": 16,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": 107,
+                                    "y": 422,
+                                    "width": 9,
+                                    "height": 6
+                                  },
+                                  "display": "inline",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [],
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "isImage": true,
+                              "overflow": "hidden",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [],
+                              "bbox": {
+                                "x": 128,
+                                "y": 414,
+                                "width": 44,
+                                "height": 20
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isText": true,
+                              "textPreview": "voice",
+                              "fontSize": "14px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"Space Mono\", monospace",
+                              "lineHeight": "20px",
+                              "letterSpacing": "0.32px",
+                              "color": "rgb(255, 255, 255)",
+                              "cursor": "pointer"
+                            }
+                          ],
+                          "flexDirection": "row",
+                          "justifyContent": "normal",
+                          "alignItems": "center",
+                          "gap": "8px",
+                          "bgColor": "rgba(255, 255, 255, 0.35)",
+                          "borderRadius": "3.35544e+07px",
+                          "border": "1px solid rgba(255, 255, 255, 0.6)",
+                          "boxShadow": "rgba(0, 0, 0, 0.4) 0px 8px 32px 0px, rgba(255, 255, 255, 0.25) 0px 0px 50px 0px, rgba(255, 255, 255, 0.4) 0px 1px 0px 0px inset",
+                          "padding": "10px 20px 10px 20px",
+                          "cursor": "pointer"
+                        },
+                        {
+                          "tag": "button",
+                          "classes": [
+                            "glass",
+                            "rounded-full",
+                            "px-5",
+                            "py-2.5",
+                            "text-sm"
+                          ],
+                          "bbox": {
+                            "x": 205,
+                            "y": 403,
+                            "width": 102,
+                            "height": 42
+                          },
+                          "display": "flex",
+                          "position": "static",
+                          "zIndex": "auto",
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "classes": [],
+                              "bbox": {
+                                "x": 226,
+                                "y": 416,
+                                "width": 16,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isImage": true,
+                              "overflow": "hidden",
+                              "cursor": "pointer"
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [],
+                              "bbox": {
+                                "x": 250,
+                                "y": 414,
+                                "width": 36,
+                                "height": 20
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isText": true,
+                              "textPreview": "text",
+                              "fontSize": "14px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"Space Mono\", monospace",
+                              "lineHeight": "20px",
+                              "letterSpacing": "0.32px",
+                              "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+                              "cursor": "pointer"
+                            }
+                          ],
+                          "flexDirection": "row",
+                          "justifyContent": "normal",
+                          "alignItems": "center",
+                          "gap": "8px",
+                          "bgColor": "rgba(255, 255, 255, 0.25)",
+                          "borderRadius": "3.35544e+07px",
+                          "border": "1px solid rgba(255, 255, 255, 0.5)",
+                          "boxShadow": "rgba(0, 0, 0, 0.3) 0px 8px 32px 0px, rgba(255, 255, 255, 0.2) 0px 0px 40px 0px, rgba(255, 255, 255, 0.3) 0px 1px 0px 0px inset",
+                          "padding": "10px 20px 10px 20px",
+                          "cursor": "pointer"
+                        }
+                      ],
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "gap": "12px",
+                      "margin": "32px 0px 0px 0px"
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "mt-12",
+                        "flex",
+                        "items-center",
+                        "justify-center",
+                        "gap-4"
+                      ],
+                      "bbox": {
+                        "x": -41,
+                        "y": 493,
+                        "width": 472,
+                        "height": 56
+                      },
+                      "display": "flex",
+                      "position": "static",
+                      "zIndex": "auto",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "relative",
+                            "flex",
+                            "items-center",
+                            "justify-center",
+                            "w-14"
+                          ],
+                          "bbox": {
+                            "x": -41,
+                            "y": 493,
+                            "width": 56,
+                            "height": 56
+                          },
+                          "display": "flex",
+                          "position": "relative",
+                          "zIndex": "auto",
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "classes": [],
+                              "bbox": {
+                                "x": -25,
+                                "y": 509,
+                                "width": 24,
+                                "height": 24
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": -20,
+                                    "y": 519,
+                                    "width": 14,
+                                    "height": 9
+                                  },
+                                  "display": "inline",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [],
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "rect",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": -16,
+                                    "y": 511,
+                                    "width": 6,
+                                    "height": 13
+                                  },
+                                  "display": "inline",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [],
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "isImage": true,
+                              "overflow": "hidden",
+                              "cursor": "pointer"
+                            }
+                          ],
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "gap": "normal",
+                          "bgColor": "rgba(255, 255, 255, 0.25)",
+                          "borderRadius": "3.35544e+07px",
+                          "border": "1px solid rgba(255, 255, 255, 0.5)",
+                          "boxShadow": "rgba(0, 0, 0, 0.3) 0px 8px 32px 0px, rgba(255, 255, 255, 0.2) 0px 0px 40px 0px, rgba(255, 255, 255, 0.3) 0px 1px 0px 0px inset",
+                          "cursor": "pointer"
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "glass",
+                            "rounded-full",
+                            "px-8",
+                            "py-4",
+                            "w-[400px]"
+                          ],
+                          "bbox": {
+                            "x": 31,
+                            "y": 493,
+                            "width": 400,
+                            "height": 56
+                          },
+                          "display": "flex",
+                          "position": "static",
+                          "zIndex": "auto",
+                          "children": [
+                            {
+                              "tag": "div",
+                              "classes": [
+                                "w-full",
+                                "flex",
+                                "items-center",
+                                "justify-center",
+                                "px-4"
+                              ],
+                              "bbox": {
+                                "x": 64,
+                                "y": 497,
+                                "width": 334,
+                                "height": 48
+                              },
+                              "display": "flex",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "classes": [
+                                    "relative",
+                                    "inline-block",
+                                    "overflow-hidden"
+                                  ],
+                                  "bbox": {
+                                    "x": 80,
+                                    "y": 497,
+                                    "width": 302,
+                                    "height": 48
+                                  },
+                                  "display": "block",
+                                  "position": "relative",
+                                  "zIndex": "auto",
+                                  "children": [],
+                                  "overflow": "hidden"
+                                }
+                              ],
+                              "flexDirection": "row",
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "gap": "normal",
+                              "padding": "0px 16px 0px 16px"
+                            }
+                          ],
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "gap": "normal",
+                          "bgColor": "rgba(255, 255, 255, 0.25)",
+                          "borderRadius": "3.35544e+07px",
+                          "border": "1px solid rgba(255, 255, 255, 0.5)",
+                          "boxShadow": "rgba(0, 0, 0, 0.3) 0px 8px 32px 0px, rgba(255, 255, 255, 0.2) 0px 0px 40px 0px, rgba(255, 255, 255, 0.3) 0px 1px 0px 0px inset",
+                          "padding": "16px 32px 16px 32px"
+                        }
+                      ],
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "gap": "16px",
+                      "margin": "48px 0px 0px 0px"
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "mt-6",
+                        "flex",
+                        "flex-col",
+                        "items-center",
+                        "relative"
+                      ],
+                      "bbox": {
+                        "x": -41,
+                        "y": 573,
+                        "width": 472,
+                        "height": 16
+                      },
+                      "display": "flex",
+                      "position": "relative",
+                      "zIndex": "30",
+                      "children": [
+                        {
+                          "tag": "button",
+                          "classes": [
+                            "flex",
+                            "items-center",
+                            "gap-2",
+                            "text-white/40",
+                            "hover:text-white/70"
+                          ],
+                          "bbox": {
+                            "x": 114,
+                            "y": 573,
+                            "width": 163,
+                            "height": 16
+                          },
+                          "display": "flex",
+                          "position": "static",
+                          "zIndex": "auto",
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "classes": [],
+                              "bbox": {
+                                "x": 114,
+                                "y": 575,
+                                "width": 12,
+                                "height": 12
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": 115,
+                                    "y": 575,
+                                    "width": 10,
+                                    "height": 10
+                                  },
+                                  "display": "inline",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": []
+                                }
+                              ],
+                              "isImage": true,
+                              "overflow": "hidden"
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [],
+                              "bbox": {
+                                "x": 134,
+                                "y": 573,
+                                "width": 123,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isText": true,
+                              "textPreview": "advanced options",
+                              "fontSize": "12px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"Space Mono\", monospace",
+                              "lineHeight": "16px",
+                              "letterSpacing": "0.32px",
+                              "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)"
+                            },
+                            {
+                              "tag": "svg",
+                              "classes": [],
+                              "bbox": {
+                                "x": 264,
+                                "y": 575,
+                                "width": 12,
+                                "height": 12
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isImage": true,
+                              "overflow": "hidden"
+                            }
+                          ],
+                          "flexDirection": "row",
+                          "justifyContent": "normal",
+                          "alignItems": "center",
+                          "gap": "8px"
+                        }
+                      ],
+                      "flexDirection": "column",
+                      "justifyContent": "normal",
+                      "alignItems": "center",
+                      "gap": "normal",
+                      "margin": "24px 0px 0px 0px"
+                    }
+                  ]
+                }
+              ],
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "gap": "normal",
+              "padding": "0px 24px 128px 24px"
+            },
+            {
+              "tag": "footer",
+              "classes": [
+                "relative",
+                "z-10"
+              ],
+              "bbox": {
+                "x": 0,
+                "y": 671,
+                "width": 390,
+                "height": 173
+              },
+              "display": "block",
+              "position": "relative",
+              "zIndex": "10",
+              "children": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "border-t",
+                    "border-white/10",
+                    "py-8",
+                    "px-6"
+                  ],
+                  "bbox": {
+                    "x": 0,
+                    "y": 671,
+                    "width": 390,
+                    "height": 173
+                  },
+                  "display": "block",
+                  "position": "static",
+                  "zIndex": "auto",
+                  "children": [
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "max-w-6xl",
+                        "mx-auto",
+                        "space-y-4"
+                      ],
+                      "bbox": {
+                        "x": 24,
+                        "y": 704,
+                        "width": 342,
+                        "height": 108
+                      },
+                      "display": "block",
+                      "position": "static",
+                      "zIndex": "auto",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "flex",
+                            "items-center",
+                            "justify-center",
+                            "gap-2"
+                          ],
+                          "bbox": {
+                            "x": 24,
+                            "y": 704,
+                            "width": 342,
+                            "height": 16
+                          },
+                          "display": "flex",
+                          "position": "static",
+                          "zIndex": "auto",
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "classes": [],
+                              "bbox": {
+                                "x": 101,
+                                "y": 705,
+                                "width": 14,
+                                "height": 14
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": 104,
+                                    "y": 706,
+                                    "width": 7,
+                                    "height": 8
+                                  },
+                                  "display": "inline",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": []
+                                }
+                              ],
+                              "isImage": true,
+                              "overflow": "hidden"
+                            },
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "font-mono",
+                                "text-xs",
+                                "text-white/50",
+                                "tracking-wider"
+                              ],
+                              "bbox": {
+                                "x": 123,
+                                "y": 704,
+                                "width": 167,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "text-white/70"
+                                  ],
+                                  "bbox": {
+                                    "x": 194,
+                                    "y": 703,
+                                    "width": 95,
+                                    "height": 17
+                                  },
+                                  "display": "inline",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "sb hacks xii",
+                                  "fontSize": "12px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "16px",
+                                  "letterSpacing": "0.6px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)"
+                                }
+                              ]
+                            }
+                          ],
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "gap": "8px",
+                          "margin": "0px 0px 16px 0px"
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "flex",
+                            "flex-wrap",
+                            "items-center",
+                            "justify-center",
+                            "gap-3"
+                          ],
+                          "bbox": {
+                            "x": 24,
+                            "y": 736,
+                            "width": 342,
+                            "height": 44
+                          },
+                          "display": "flex",
+                          "position": "static",
+                          "zIndex": "auto",
+                          "children": [
+                            {
+                              "tag": "span",
+                              "classes": [
+                                "text-white/30"
+                              ],
+                              "bbox": {
+                                "x": 56,
+                                "y": 736,
+                                "width": 38,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isText": true,
+                              "textPreview": "team:",
+                              "fontSize": "12px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"Space Mono\", monospace",
+                              "lineHeight": "16px",
+                              "letterSpacing": "0.32px",
+                              "textTransform": "lowercase",
+                              "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.3)"
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [
+                                "text-white/50"
+                              ],
+                              "bbox": {
+                                "x": 106,
+                                "y": 736,
+                                "width": 92,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isText": true,
+                              "textPreview": "Stephen Hung",
+                              "fontSize": "12px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"Space Mono\", monospace",
+                              "lineHeight": "16px",
+                              "letterSpacing": "0.32px",
+                              "textTransform": "lowercase",
+                              "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)"
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [
+                                "text-white/20"
+                              ],
+                              "bbox": {
+                                "x": 210,
+                                "y": 736,
+                                "width": 8,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isText": true,
+                              "textPreview": "•",
+                              "fontSize": "12px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"Space Mono\", monospace",
+                              "lineHeight": "16px",
+                              "letterSpacing": "0.32px",
+                              "textTransform": "lowercase",
+                              "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.2)"
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [
+                                "text-white/50"
+                              ],
+                              "bbox": {
+                                "x": 230,
+                                "y": 736,
+                                "width": 84,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isText": true,
+                              "textPreview": "Matthew Kim",
+                              "fontSize": "12px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"Space Mono\", monospace",
+                              "lineHeight": "16px",
+                              "letterSpacing": "0.32px",
+                              "textTransform": "lowercase",
+                              "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)"
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [
+                                "text-white/20"
+                              ],
+                              "bbox": {
+                                "x": 326,
+                                "y": 736,
+                                "width": 8,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isText": true,
+                              "textPreview": "•",
+                              "fontSize": "12px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"Space Mono\", monospace",
+                              "lineHeight": "16px",
+                              "letterSpacing": "0.32px",
+                              "textTransform": "lowercase",
+                              "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.2)"
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [
+                                "text-white/50"
+                              ],
+                              "bbox": {
+                                "x": 64,
+                                "y": 764,
+                                "width": 77,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isText": true,
+                              "textPreview": "Janet Phee",
+                              "fontSize": "12px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"Space Mono\", monospace",
+                              "lineHeight": "16px",
+                              "letterSpacing": "0.32px",
+                              "textTransform": "lowercase",
+                              "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)"
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [
+                                "text-white/20"
+                              ],
+                              "bbox": {
+                                "x": 152,
+                                "y": 764,
+                                "width": 8,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isText": true,
+                              "textPreview": "•",
+                              "fontSize": "12px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"Space Mono\", monospace",
+                              "lineHeight": "16px",
+                              "letterSpacing": "0.32px",
+                              "textTransform": "lowercase",
+                              "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.2)"
+                            },
+                            {
+                              "tag": "span",
+                              "classes": [
+                                "text-white/50"
+                              ],
+                              "bbox": {
+                                "x": 172,
+                                "y": 764,
+                                "width": 77,
+                                "height": 16
+                              },
+                              "display": "block",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [],
+                              "isText": true,
+                              "textPreview": "Brandon So",
+                              "fontSize": "12px",
+                              "fontWeight": "400",
+                              "fontFamily": "\"Space Mono\", monospace",
+                              "lineHeight": "16px",
+                              "letterSpacing": "0.32px",
+                              "textTransform": "lowercase",
+                              "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "flex",
+                                "items-center",
+                                "gap-1.5",
+                                "text-white/50",
+                                "hover:text-white"
+                              ],
+                              "bbox": {
+                                "x": 260,
+                                "y": 764,
+                                "width": 66,
+                                "height": 16
+                              },
+                              "display": "flex",
+                              "position": "static",
+                              "zIndex": "auto",
+                              "children": [
+                                {
+                                  "tag": "svg",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": 260,
+                                    "y": 765,
+                                    "width": 14,
+                                    "height": 14
+                                  },
+                                  "display": "block",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [
+                                    {
+                                      "tag": "path",
+                                      "classes": [],
+                                      "bbox": {
+                                        "x": 263,
+                                        "y": 766,
+                                        "width": 9,
+                                        "height": 12
+                                      },
+                                      "display": "inline",
+                                      "position": "static",
+                                      "zIndex": "auto",
+                                      "children": [],
+                                      "cursor": "pointer"
+                                    }
+                                  ],
+                                  "isImage": true,
+                                  "overflow": "hidden",
+                                  "cursor": "pointer"
+                                },
+                                {
+                                  "tag": "span",
+                                  "classes": [],
+                                  "bbox": {
+                                    "x": 280,
+                                    "y": 764,
+                                    "width": 46,
+                                    "height": 16
+                                  },
+                                  "display": "block",
+                                  "position": "static",
+                                  "zIndex": "auto",
+                                  "children": [],
+                                  "isText": true,
+                                  "textPreview": "source",
+                                  "fontSize": "12px",
+                                  "fontWeight": "400",
+                                  "fontFamily": "\"Space Mono\", monospace",
+                                  "lineHeight": "16px",
+                                  "letterSpacing": "0.32px",
+                                  "textTransform": "lowercase",
+                                  "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+                                  "cursor": "pointer"
+                                }
+                              ],
+                              "flexDirection": "row",
+                              "justifyContent": "normal",
+                              "alignItems": "center",
+                              "gap": "6px",
+                              "cursor": "pointer"
+                            }
+                          ],
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "gap": "12px",
+                          "margin": "0px 0px 16px 0px"
+                        },
+                        {
+                          "tag": "p",
+                          "classes": [
+                            "font-mono",
+                            "text-xs",
+                            "text-white/30",
+                            "text-center",
+                            "tracking-wide"
+                          ],
+                          "bbox": {
+                            "x": 24,
+                            "y": 796,
+                            "width": 342,
+                            "height": 16
+                          },
+                          "display": "block",
+                          "position": "static",
+                          "zIndex": "auto",
+                          "children": [],
+                          "isText": true,
+                          "textPreview": "voice-guided 3d exploration powered by ai",
+                          "fontSize": "12px",
+                          "fontWeight": "400",
+                          "fontFamily": "\"Space Mono\", monospace",
+                          "lineHeight": "16px",
+                          "letterSpacing": "0.3px",
+                          "textTransform": "lowercase",
+                          "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.3)"
+                        }
+                      ]
+                    }
+                  ],
+                  "border": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+                  "padding": "32px 24px 32px 24px"
+                }
+              ]
+            }
+          ],
+          "overflow": "hidden"
+        }
+      ],
+      "overflow": "hidden auto"
+    }
+  }
+]

@@ -1,0 +1,2486 @@
+[
+  {
+    "triggerCsId": "8",
+    "triggerTag": "button",
+    "targetCsId": "8",
+    "delta": {
+      "transform": {
+        "from": "none",
+        "to": "matrix(1.05, 0, 0, 1.05, 0, 0)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "13",
+    "triggerTag": "button",
+    "targetCsId": "13",
+    "delta": {
+      "transform": {
+        "from": "none",
+        "to": "matrix(1.05, 0, 0, 1.05, 0, 0)"
+      },
+      "backgroundColor": {
+        "from": "rgba(0, 0, 0, 0)",
+        "to": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "13",
+    "triggerTag": "button",
+    "targetCsId": "14",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "13",
+    "triggerTag": "button",
+    "targetCsId": "15",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "13",
+    "triggerTag": "button",
+    "targetCsId": "16",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "13",
+    "triggerTag": "button",
+    "targetCsId": "17",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "13",
+    "triggerTag": "button",
+    "targetCsId": "18",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "13",
+    "triggerTag": "button",
+    "targetCsId": "19",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "21",
+    "triggerTag": "button",
+    "targetCsId": "21",
+    "delta": {
+      "transform": {
+        "from": "none",
+        "to": "matrix(1.05, 0, 0, 1.05, 0, 0)"
+      },
+      "backgroundColor": {
+        "from": "rgba(0, 0, 0, 0)",
+        "to": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "21",
+    "triggerTag": "button",
+    "targetCsId": "22",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "21",
+    "triggerTag": "button",
+    "targetCsId": "23",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "21",
+    "triggerTag": "button",
+    "targetCsId": "24",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "21",
+    "triggerTag": "button",
+    "targetCsId": "25",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "21",
+    "triggerTag": "button",
+    "targetCsId": "26",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "37",
+    "triggerTag": "a",
+    "targetCsId": "37",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "37",
+    "triggerTag": "a",
+    "targetCsId": "38",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "37",
+    "triggerTag": "a",
+    "targetCsId": "39",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "37",
+    "triggerTag": "a",
+    "targetCsId": "40",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "41",
+    "triggerTag": "a",
+    "targetCsId": "41",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(49, 120, 198)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "41",
+    "triggerTag": "a",
+    "targetCsId": "42",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(49, 120, 198)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "41",
+    "triggerTag": "a",
+    "targetCsId": "43",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(49, 120, 198)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "41",
+    "triggerTag": "a",
+    "targetCsId": "44",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "45",
+    "triggerTag": "a",
+    "targetCsId": "45",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(100, 108, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "45",
+    "triggerTag": "a",
+    "targetCsId": "46",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(100, 108, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "45",
+    "triggerTag": "a",
+    "targetCsId": "47",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(100, 108, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "45",
+    "triggerTag": "a",
+    "targetCsId": "48",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "49",
+    "triggerTag": "a",
+    "targetCsId": "49",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(6, 182, 212)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "49",
+    "triggerTag": "a",
+    "targetCsId": "50",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(6, 182, 212)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "49",
+    "triggerTag": "a",
+    "targetCsId": "51",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(6, 182, 212)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "49",
+    "triggerTag": "a",
+    "targetCsId": "52",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "53",
+    "triggerTag": "a",
+    "targetCsId": "53",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 202, 40)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "53",
+    "triggerTag": "a",
+    "targetCsId": "54",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 202, 40)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "53",
+    "triggerTag": "a",
+    "targetCsId": "55",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 202, 40)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "53",
+    "triggerTag": "a",
+    "targetCsId": "56",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "57",
+    "triggerTag": "a",
+    "targetCsId": "57",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(66, 133, 244)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "57",
+    "triggerTag": "a",
+    "targetCsId": "58",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(66, 133, 244)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "57",
+    "triggerTag": "a",
+    "targetCsId": "59",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(66, 133, 244)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "57",
+    "triggerTag": "a",
+    "targetCsId": "60",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "61",
+    "triggerTag": "a",
+    "targetCsId": "61",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(71, 162, 72)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "61",
+    "triggerTag": "a",
+    "targetCsId": "62",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(71, 162, 72)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "61",
+    "triggerTag": "a",
+    "targetCsId": "63",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(71, 162, 72)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "61",
+    "triggerTag": "a",
+    "targetCsId": "64",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "65",
+    "triggerTag": "a",
+    "targetCsId": "65",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(0, 123, 252)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "65",
+    "triggerTag": "a",
+    "targetCsId": "66",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(0, 123, 252)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "65",
+    "triggerTag": "a",
+    "targetCsId": "67",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(0, 123, 252)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "65",
+    "triggerTag": "a",
+    "targetCsId": "68",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "69",
+    "triggerTag": "a",
+    "targetCsId": "69",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "69",
+    "triggerTag": "a",
+    "targetCsId": "70",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "69",
+    "triggerTag": "a",
+    "targetCsId": "71",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "69",
+    "triggerTag": "a",
+    "targetCsId": "72",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "73",
+    "triggerTag": "a",
+    "targetCsId": "73",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(1, 1, 1)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "73",
+    "triggerTag": "a",
+    "targetCsId": "74",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(1, 1, 1)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "73",
+    "triggerTag": "a",
+    "targetCsId": "75",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(1, 1, 1)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "73",
+    "triggerTag": "a",
+    "targetCsId": "76",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "77",
+    "triggerTag": "a",
+    "targetCsId": "77",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "77",
+    "triggerTag": "a",
+    "targetCsId": "78",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "77",
+    "triggerTag": "a",
+    "targetCsId": "79",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "77",
+    "triggerTag": "a",
+    "targetCsId": "80",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "77",
+    "triggerTag": "a",
+    "targetCsId": "81",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "77",
+    "triggerTag": "a",
+    "targetCsId": "82",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "77",
+    "triggerTag": "a",
+    "targetCsId": "83",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "77",
+    "triggerTag": "a",
+    "targetCsId": "84",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "77",
+    "triggerTag": "a",
+    "targetCsId": "85",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "77",
+    "triggerTag": "a",
+    "targetCsId": "86",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "77",
+    "triggerTag": "a",
+    "targetCsId": "87",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "88",
+    "triggerTag": "a",
+    "targetCsId": "88",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "88",
+    "triggerTag": "a",
+    "targetCsId": "89",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "88",
+    "triggerTag": "a",
+    "targetCsId": "90",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "88",
+    "triggerTag": "a",
+    "targetCsId": "91",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "88",
+    "triggerTag": "a",
+    "targetCsId": "92",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "88",
+    "triggerTag": "a",
+    "targetCsId": "93",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "88",
+    "triggerTag": "a",
+    "targetCsId": "94",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "95",
+    "triggerTag": "a",
+    "targetCsId": "95",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(168, 85, 247)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "95",
+    "triggerTag": "a",
+    "targetCsId": "96",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(168, 85, 247)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "95",
+    "triggerTag": "a",
+    "targetCsId": "97",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(168, 85, 247)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "95",
+    "triggerTag": "a",
+    "targetCsId": "98",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(168, 85, 247)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "95",
+    "triggerTag": "a",
+    "targetCsId": "99",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(168, 85, 247)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "95",
+    "triggerTag": "a",
+    "targetCsId": "100",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "101",
+    "triggerTag": "a",
+    "targetCsId": "101",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(19, 239, 149)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "101",
+    "triggerTag": "a",
+    "targetCsId": "102",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(19, 239, 149)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "101",
+    "triggerTag": "a",
+    "targetCsId": "103",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(19, 239, 149)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "101",
+    "triggerTag": "a",
+    "targetCsId": "104",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(19, 239, 149)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "101",
+    "triggerTag": "a",
+    "targetCsId": "105",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(19, 239, 149)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "101",
+    "triggerTag": "a",
+    "targetCsId": "106",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "107",
+    "triggerTag": "a",
+    "targetCsId": "107",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(97, 218, 251)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "107",
+    "triggerTag": "a",
+    "targetCsId": "108",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(97, 218, 251)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "107",
+    "triggerTag": "a",
+    "targetCsId": "109",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(97, 218, 251)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "107",
+    "triggerTag": "a",
+    "targetCsId": "110",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "111",
+    "triggerTag": "a",
+    "targetCsId": "111",
+    "delta": {
+      "filter": {
+        "from": "grayscale(1)",
+        "to": "grayscale(0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "111",
+    "triggerTag": "a",
+    "targetCsId": "112",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "111",
+    "triggerTag": "a",
+    "targetCsId": "113",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "111",
+    "triggerTag": "a",
+    "targetCsId": "114",
+    "delta": {
+      "opacity": {
+        "from": "0",
+        "to": "1"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "188",
+    "triggerTag": "button",
+    "targetCsId": "188",
+    "delta": {
+      "transform": {
+        "from": "none",
+        "to": "matrix(1.05, 0, 0, 1.05, 0, 0)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "194",
+    "triggerTag": "button",
+    "targetCsId": "194",
+    "delta": {
+      "transform": {
+        "from": "none",
+        "to": "matrix(1.05, 0, 0, 1.05, 0, 0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "194",
+    "triggerTag": "button",
+    "targetCsId": "199",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "212",
+    "triggerTag": "button",
+    "targetCsId": "212",
+    "delta": {
+      "transform": {
+        "from": "none",
+        "to": "matrix(1.02, 0, 0, 1.02, 0, 0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)",
+        "to": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "212",
+    "triggerTag": "button",
+    "targetCsId": "213",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)",
+        "to": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "212",
+    "triggerTag": "button",
+    "targetCsId": "214",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)",
+        "to": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "212",
+    "triggerTag": "button",
+    "targetCsId": "215",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)",
+        "to": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "212",
+    "triggerTag": "button",
+    "targetCsId": "216",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)",
+        "to": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "212",
+    "triggerTag": "button",
+    "targetCsId": "217",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)",
+        "to": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "212",
+    "triggerTag": "button",
+    "targetCsId": "218",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)",
+        "to": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "212",
+    "triggerTag": "button",
+    "targetCsId": "219",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)",
+        "to": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "212",
+    "triggerTag": "button",
+    "targetCsId": "220",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)",
+        "to": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "212",
+    "triggerTag": "button",
+    "targetCsId": "221",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.4)",
+        "to": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "246",
+    "triggerTag": "a",
+    "targetCsId": "246",
+    "delta": {
+      "transform": {
+        "from": "none",
+        "to": "matrix(1, 0, 0, 1, 2, 0)"
+      },
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "246",
+    "triggerTag": "a",
+    "targetCsId": "247",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "246",
+    "triggerTag": "a",
+    "targetCsId": "248",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "246",
+    "triggerTag": "a",
+    "targetCsId": "249",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "246",
+    "triggerTag": "a",
+    "targetCsId": "250",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0.15s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "42",
+    "triggerTag": "svg",
+    "targetCsId": "42",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(49, 120, 198)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "42",
+    "triggerTag": "svg",
+    "targetCsId": "43",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(49, 120, 198)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "43",
+    "triggerTag": "path",
+    "targetCsId": "43",
+    "delta": {
+      "color": {
+        "from": "oklab(0.985765 -0.001276 -0.00438393 / 0.508354)",
+        "to": "rgb(49, 120, 198)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "46",
+    "triggerTag": "svg",
+    "targetCsId": "46",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(100, 108, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "46",
+    "triggerTag": "svg",
+    "targetCsId": "47",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(100, 108, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "47",
+    "triggerTag": "path",
+    "targetCsId": "47",
+    "delta": {
+      "color": {
+        "from": "oklab(0.987099 0.000732143 -0.00698538 / 0.508339)",
+        "to": "rgb(100, 108, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "50",
+    "triggerTag": "svg",
+    "targetCsId": "50",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(6, 182, 212)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "50",
+    "triggerTag": "svg",
+    "targetCsId": "51",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(6, 182, 212)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "51",
+    "triggerTag": "path",
+    "targetCsId": "51",
+    "delta": {
+      "color": {
+        "from": "oklab(0.98273 -0.00617382 -0.00437035 / 0.515607)",
+        "to": "rgb(6, 182, 212)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "54",
+    "triggerTag": "svg",
+    "targetCsId": "54",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 202, 40)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "54",
+    "triggerTag": "svg",
+    "targetCsId": "55",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 202, 40)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "55",
+    "triggerTag": "path",
+    "targetCsId": "55",
+    "delta": {
+      "color": {
+        "from": "oklab(0.99551 0.000207069 0.00548753 / 0.50827)",
+        "to": "rgb(255, 202, 40)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "58",
+    "triggerTag": "svg",
+    "targetCsId": "58",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(66, 133, 244)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "58",
+    "triggerTag": "svg",
+    "targetCsId": "59",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(66, 133, 244)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "59",
+    "triggerTag": "path",
+    "targetCsId": "59",
+    "delta": {
+      "color": {
+        "from": "oklab(0.977692 -0.00185013 -0.0106758 / 0.515553)",
+        "to": "rgb(66, 133, 244)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "62",
+    "triggerTag": "svg",
+    "targetCsId": "62",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(71, 162, 72)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "62",
+    "triggerTag": "svg",
+    "targetCsId": "63",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(71, 162, 72)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "66",
+    "triggerTag": "svg",
+    "targetCsId": "66",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(0, 123, 252)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "66",
+    "triggerTag": "svg",
+    "targetCsId": "67",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(0, 123, 252)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "67",
+    "triggerTag": "path",
+    "targetCsId": "67",
+    "delta": {
+      "color": {
+        "from": "oklab(0.976052 -0.00286646 -0.012468 / 0.515527)",
+        "to": "rgb(0, 123, 252)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "70",
+    "triggerTag": "svg",
+    "targetCsId": "70",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "70",
+    "triggerTag": "svg",
+    "targetCsId": "71",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "71",
+    "triggerTag": "path",
+    "targetCsId": "71",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.515686)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "74",
+    "triggerTag": "svg",
+    "targetCsId": "74",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(1, 1, 1)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "74",
+    "triggerTag": "svg",
+    "targetCsId": "75",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(1, 1, 1)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "75",
+    "triggerTag": "path",
+    "targetCsId": "75",
+    "delta": {
+      "color": {
+        "from": "oklab(0.969306 0.0000441694 0.0000194702 / 0.508362)",
+        "to": "rgb(1, 1, 1)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "78",
+    "triggerTag": "svg",
+    "targetCsId": "78",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "78",
+    "triggerTag": "svg",
+    "targetCsId": "79",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "78",
+    "triggerTag": "svg",
+    "targetCsId": "80",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "78",
+    "triggerTag": "svg",
+    "targetCsId": "81",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "78",
+    "triggerTag": "svg",
+    "targetCsId": "82",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "78",
+    "triggerTag": "svg",
+    "targetCsId": "83",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "78",
+    "triggerTag": "svg",
+    "targetCsId": "84",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "78",
+    "triggerTag": "svg",
+    "targetCsId": "85",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "78",
+    "triggerTag": "svg",
+    "targetCsId": "86",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "79",
+    "triggerTag": "path",
+    "targetCsId": "79",
+    "delta": {
+      "color": {
+        "from": "oklab(0.990525 0.0055286 0.00232946 / 0.508345)",
+        "to": "rgb(255, 107, 107)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "89",
+    "triggerTag": "svg",
+    "targetCsId": "89",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "89",
+    "triggerTag": "svg",
+    "targetCsId": "90",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "89",
+    "triggerTag": "svg",
+    "targetCsId": "91",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "89",
+    "triggerTag": "svg",
+    "targetCsId": "92",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "89",
+    "triggerTag": "svg",
+    "targetCsId": "93",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "90",
+    "triggerTag": "path",
+    "targetCsId": "90",
+    "delta": {
+      "color": {
+        "from": "oklab(0.993171 -0.00097456 0.0109514 / 0.515534)",
+        "to": "rgb(255, 215, 0)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "96",
+    "triggerTag": "svg",
+    "targetCsId": "96",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(168, 85, 247)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "96",
+    "triggerTag": "svg",
+    "targetCsId": "97",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(168, 85, 247)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "96",
+    "triggerTag": "svg",
+    "targetCsId": "98",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(168, 85, 247)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "96",
+    "triggerTag": "svg",
+    "targetCsId": "99",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(168, 85, 247)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "102",
+    "triggerTag": "svg",
+    "targetCsId": "102",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(19, 239, 149)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "102",
+    "triggerTag": "svg",
+    "targetCsId": "103",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(19, 239, 149)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "102",
+    "triggerTag": "svg",
+    "targetCsId": "104",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(19, 239, 149)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "102",
+    "triggerTag": "svg",
+    "targetCsId": "105",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(19, 239, 149)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "108",
+    "triggerTag": "svg",
+    "targetCsId": "108",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(97, 218, 251)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "108",
+    "triggerTag": "svg",
+    "targetCsId": "109",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(97, 218, 251)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "109",
+    "triggerTag": "path",
+    "targetCsId": "109",
+    "delta": {
+      "color": {
+        "from": "oklab(0.989802 -0.00548181 -0.00440599 / 0.515645)",
+        "to": "rgb(97, 218, 251)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "112",
+    "triggerTag": "svg",
+    "targetCsId": "112",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "112",
+    "triggerTag": "svg",
+    "targetCsId": "113",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "113",
+    "triggerTag": "path",
+    "targetCsId": "113",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.508261)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "116",
+    "triggerTag": "svg",
+    "targetCsId": "116",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(49, 120, 198)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "116",
+    "triggerTag": "svg",
+    "targetCsId": "117",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(49, 120, 198)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "117",
+    "triggerTag": "path",
+    "targetCsId": "117",
+    "delta": {
+      "color": {
+        "from": "oklab(0.985905 -0.00126301 -0.00434064 / 0.508271)",
+        "to": "rgb(49, 120, 198)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "120",
+    "triggerTag": "svg",
+    "targetCsId": "120",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(100, 108, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "120",
+    "triggerTag": "svg",
+    "targetCsId": "121",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(100, 108, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "121",
+    "triggerTag": "path",
+    "targetCsId": "121",
+    "delta": {
+      "color": {
+        "from": "oklab(0.976196 0.0013127 -0.0129091 / 0.51561)",
+        "to": "rgb(100, 108, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "124",
+    "triggerTag": "svg",
+    "targetCsId": "124",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(6, 182, 212)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "124",
+    "triggerTag": "svg",
+    "targetCsId": "125",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(6, 182, 212)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "125",
+    "triggerTag": "path",
+    "targetCsId": "125",
+    "delta": {
+      "color": {
+        "from": "oklab(0.982659 -0.00619957 -0.00438853 / 0.515674)",
+        "to": "rgb(6, 182, 212)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "128",
+    "triggerTag": "svg",
+    "targetCsId": "128",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 202, 40)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "128",
+    "triggerTag": "svg",
+    "targetCsId": "129",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 202, 40)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "129",
+    "triggerTag": "path",
+    "targetCsId": "129",
+    "delta": {
+      "color": {
+        "from": "oklab(0.995499 0.000207488 0.00550171 / 0.508292)",
+        "to": "rgb(255, 202, 40)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "199",
+    "triggerTag": "span",
+    "targetCsId": "199",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455677 0.0000200868 / 0.700512)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "201",
+    "triggerTag": "div",
+    "targetCsId": "201",
+    "delta": {
+      "transform": {
+        "from": "none",
+        "to": "matrix(1.05, 0, 0, 1.05, 0, 0)"
+      }
+    },
+    "duration": "0.3s",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  },
+  {
+    "triggerCsId": "247",
+    "triggerTag": "svg",
+    "targetCsId": "247",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "247",
+    "triggerTag": "svg",
+    "targetCsId": "248",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "247",
+    "triggerTag": "svg",
+    "targetCsId": "249",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  },
+  {
+    "triggerCsId": "250",
+    "triggerTag": "span",
+    "targetCsId": "250",
+    "delta": {
+      "color": {
+        "from": "oklab(0.999994 0.0000455678 0.0000200868 / 0.5)",
+        "to": "rgb(255, 255, 255)"
+      }
+    },
+    "duration": "0s",
+    "easing": "ease"
+  }
+]

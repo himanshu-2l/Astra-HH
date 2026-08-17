@@ -1,0 +1,772 @@
+[
+  {
+    "csId": "8",
+    "framerName": null,
+    "tag": "button",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "9",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "12",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "13",
+    "framerName": null,
+    "tag": "button",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "14",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "19",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "21",
+    "framerName": null,
+    "tag": "button",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "22",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "26",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "33",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "36",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "37",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.05,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "40",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.05,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "41",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.1,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "44",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.1,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "45",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.15,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "48",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.15,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "49",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.2,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "52",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.2,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "53",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.25,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "56",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.25,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "57",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.3,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "60",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.3,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "61",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.35,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "64",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.35,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "65",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.4,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "68",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.4,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "69",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.45,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "72",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.45,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "73",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.5,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "76",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.5,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "77",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.55,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "78",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.55,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "87",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.55,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "88",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.6,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "89",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.6,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "94",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.6,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "95",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.65,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "96",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.65,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "100",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.65,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "101",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.7000000000000002,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "102",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.7000000000000002,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "106",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.15,
+      "y": -2
+    },
+    "transition": {
+      "delay": 1.7000000000000002,
+      "duration": 0.5
+    },
+    "initial": {
+      "opacity": 0,
+      "y": 10
+    }
+  },
+  {
+    "csId": "188",
+    "framerName": null,
+    "tag": "button",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "189",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "193",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "194",
+    "framerName": null,
+    "tag": "button",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "195",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "199",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "201",
+    "framerName": null,
+    "tag": "div",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "202",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "scale": 1.05
+    }
+  },
+  {
+    "csId": "212",
+    "framerName": null,
+    "tag": "button",
+    "whileHover": {
+      "scale": 1.02
+    }
+  },
+  {
+    "csId": "213",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "scale": 1.02
+    }
+  },
+  {
+    "csId": "218",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "scale": 1.02
+    }
+  },
+  {
+    "csId": "219",
+    "framerName": null,
+    "tag": "div",
+    "whileHover": {
+      "scale": 1.02
+    }
+  },
+  {
+    "csId": "246",
+    "framerName": null,
+    "tag": "a",
+    "whileHover": {
+      "x": 2
+    }
+  },
+  {
+    "csId": "247",
+    "framerName": null,
+    "tag": "svg",
+    "whileHover": {
+      "x": 2
+    }
+  },
+  {
+    "csId": "250",
+    "framerName": null,
+    "tag": "span",
+    "whileHover": {
+      "x": 2
+    }
+  }
+]

@@ -1,26 +1,44 @@
 import React from 'react';
-import { Cpu, Zap, Activity, Settings } from 'lucide-react';
+import { Cpu, Zap, Activity, Settings, Sparkles, LayoutDashboard } from 'lucide-react';
 
 interface NavbarProps {
   serverUrl: string;
   isOnline: boolean;
   onOpenSettings: () => void;
+  viewMode: 'astra' | 'flow';
+  onToggleViewMode: (mode: 'astra' | 'flow') => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ serverUrl, isOnline, onOpenSettings }) => {
+export const Navbar: React.FC<NavbarProps> = ({
+  serverUrl,
+  isOnline,
+  onOpenSettings,
+  viewMode,
+  onToggleViewMode,
+}) => {
   return (
-    <header className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 px-6 border-b border-slate-800/80 bg-obsidian-950/60 backdrop-blur-md sticky top-0 z-40 gap-4">
+    <header className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 px-6 border-b border-slate-800/80 bg-obsidian-950/70 backdrop-blur-md sticky top-0 z-40 gap-4">
       {/* Brand & Logo */}
       <div className="flex items-center space-x-3.5">
         <div className="relative">
           <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-purple-600 via-indigo-500 to-cyan-400 p-[1px] shadow-lg shadow-purple-500/25">
             <div className="w-full h-full bg-obsidian-950 rounded-xl flex items-center justify-center">
-              <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-cyan-300 text-xl tracking-wider">A</span>
+              <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-cyan-300 text-xl tracking-wider">
+                A
+              </span>
             </div>
           </div>
           <span className="absolute -bottom-1 -right-1 flex h-3.5 w-3.5">
-            <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isOnline ? 'bg-emerald-400' : 'bg-rose-500'}`}></span>
-            <span className={`relative inline-flex rounded-full h-3.5 w-3.5 border-2 border-obsidian-950 ${isOnline ? 'bg-emerald-500' : 'bg-rose-500'}`}></span>
+            <span
+              className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${
+                isOnline ? 'bg-emerald-400' : 'bg-rose-500'
+              }`}
+            ></span>
+            <span
+              className={`relative inline-flex rounded-full h-3.5 w-3.5 border-2 border-obsidian-950 ${
+                isOnline ? 'bg-emerald-500' : 'bg-rose-500'
+              }`}
+            ></span>
           </span>
         </div>
 
@@ -40,12 +58,41 @@ export const Navbar: React.FC<NavbarProps> = ({ serverUrl, isOnline, onOpenSetti
         </div>
       </div>
 
-      {/* Badges & Actions */}
-      <div className="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-end">
+      {/* View Mode Switcher + Badges & Actions */}
+      <div className="flex flex-wrap items-center gap-3 w-full md:w-auto justify-between md:justify-end">
+        {/* View Mode Switcher Pill */}
+        <div className="flex items-center p-1 rounded-xl bg-obsidian-900 border border-slate-700 shadow-inner font-mono text-xs">
+          <button
+            onClick={() => onToggleViewMode('astra')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+              viewMode === 'astra'
+                ? 'bg-purple-600 text-white font-bold shadow-glow-purple'
+                : 'text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            <LayoutDashboard className="w-3.5 h-3.5" />
+            <span>Astra Dashboard</span>
+          </button>
+
+          <button
+            onClick={() => onToggleViewMode('flow')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+              viewMode === 'flow'
+                ? 'bg-cyan-500 text-obsidian-950 font-bold shadow-glow-cyan'
+                : 'text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Flow 3D View</span>
+          </button>
+        </div>
+
         {/* Latency Target Badge */}
         <div className="hidden sm:flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-emerald-950/40 border border-emerald-800/40 text-emerald-400 text-xs font-mono">
           <Zap className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
-          <span>SLA P50: <strong className="text-emerald-300">42.2ms</strong></span>
+          <span>
+            SLA P50: <strong className="text-emerald-300">42.2ms</strong>
+          </span>
         </div>
 
         {/* 512GB RAM Pinned Badge */}
@@ -57,10 +104,12 @@ export const Navbar: React.FC<NavbarProps> = ({ serverUrl, isOnline, onOpenSetti
         {/* Connection status button / Settings */}
         <button
           onClick={onOpenSettings}
-          className="flex items-center space-x-2 px-3.5 py-1.5 rounded-lg bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-300 font-mono transition-all hover:border-purple-500/50 hover:text-white"
+          className="flex items-center space-x-2 px-3.5 py-1.5 rounded-lg bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-300 font-mono transition-all hover:border-purple-500/50 hover:text-white cursor-pointer"
         >
           <Activity className={`w-3.5 h-3.5 ${isOnline ? 'text-emerald-400' : 'text-rose-400 animate-pulse'}`} />
-          <span className="truncate max-w-[140px]">{serverUrl.replace('http://', '').replace('https://', '')}</span>
+          <span className="truncate max-w-[120px]">
+            {serverUrl.replace('http://', '').replace('https://', '')}
+          </span>
           <Settings className="w-3.5 h-3.5 text-slate-400 ml-1" />
         </button>
       </div>

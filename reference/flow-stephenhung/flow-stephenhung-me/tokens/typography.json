@@ -1,0 +1,62 @@
+{
+  "fontFamilies": [
+    {
+      "family": "\"Space Mono\", monospace",
+      "usage": 253
+    },
+    {
+      "family": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "usage": 31
+    }
+  ],
+  "sizes": [
+    {
+      "value": "16px",
+      "usage": 193
+    },
+    {
+      "value": "14px",
+      "usage": 30
+    },
+    {
+      "value": "10px",
+      "usage": 30
+    },
+    {
+      "value": "12px",
+      "usage": 29
+    },
+    {
+      "value": "128px",
+      "usage": 2
+    }
+  ],
+  "weights": [
+    {
+      "value": "400",
+      "usage": 284
+    }
+  ],
+  "lineHeights": [
+    {
+      "value": "24px",
+      "usage": 193
+    },
+    {
+      "value": "20px",
+      "usage": 30
+    },
+    {
+      "value": "15px",
+      "usage": 30
+    },
+    {
+      "value": "16px",
+      "usage": 29
+    },
+    {
+      "value": "160px",
+      "usage": 2
+    }
+  ]
+}

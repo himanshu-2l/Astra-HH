@@ -1,0 +1,155 @@
+{
+  "behaviors": [
+    {
+      "selector": "[data-esi-sm=\"__esi-sm-0\"]",
+      "tag": "nav",
+      "kind": [
+        "pinned"
+      ],
+      "scrollFrom": 0,
+      "scrollTo": 843,
+      "vpTopSlope": 0,
+      "bboxStart": {
+        "x": 8,
+        "y": 24,
+        "w": 374,
+        "h": 74
+      },
+      "bboxEnd": {
+        "x": 8,
+        "y": 24,
+        "w": 374,
+        "h": 74
+      },
+      "text": "homelibrarysign in",
+      "sectionSlug": "01-homelibrarysign-inbuilt-with-reactthree-",
+      "csId": "6"
+    },
+    {
+      "selector": "[data-esi-sm=\"__esi-sm-1\"]",
+      "tag": "h1",
+      "kind": [
+        "pinned"
+      ],
+      "scrollFrom": 0,
+      "scrollTo": 843,
+      "vpTopSlope": 0,
+      "bboxStart": {
+        "x": -41,
+        "y": 248,
+        "w": 472,
+        "h": 90
+      },
+      "bboxEnd": {
+        "x": -41,
+        "y": 248,
+        "w": 472,
+        "h": 90
+      },
+      "text": "flow",
+      "sectionSlug": "01-homelibrarysign-inbuilt-with-reactthree-",
+      "csId": "182"
+    },
+    {
+      "selector": "[data-esi-sm=\"__esi-sm-2\"]",
+      "tag": "footer",
+      "kind": [
+        "pinned"
+      ],
+      "scrollFrom": 0,
+      "scrollTo": 843,
+      "vpTopSlope": 0,
+      "bboxStart": {
+        "x": 0,
+        "y": 671,
+        "w": 390,
+        "h": 173
+      },
+      "bboxEnd": {
+        "x": 0,
+        "y": 671,
+        "w": 390,
+        "h": 173
+      },
+      "text": "built at sb hacks xiiteam:Stephen Hung•Matthew Kim•Janet Phe",
+      "sectionSlug": "01-homelibrarysign-inbuilt-with-reactthree-",
+      "csId": "223"
+    },
+    {
+      "selector": "[data-esi-sm=\"__esi-sm-3\"]",
+      "tag": "canvas",
+      "kind": [
+        "pinned"
+      ],
+      "scrollFrom": 0,
+      "scrollTo": 843,
+      "vpTopSlope": 0,
+      "bboxStart": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 844
+      },
+      "bboxEnd": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 844
+      },
+      "sectionSlug": "01-homelibrarysign-inbuilt-with-reactthree-",
+      "csId": "3"
+    },
+    {
+      "selector": "[data-esi-sm=\"__esi-sm-4\"]",
+      "tag": "div",
+      "kind": [
+        "pinned"
+      ],
+      "scrollFrom": 0,
+      "scrollTo": 843,
+      "vpTopSlope": 0,
+      "bboxStart": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 844
+      },
+      "bboxEnd": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 844
+      },
+      "sectionSlug": "01-homelibrarysign-inbuilt-with-reactthree-",
+      "csId": "4"
+    },
+    {
+      "selector": "[data-esi-sm=\"__esi-sm-5\"]",
+      "tag": "div",
+      "kind": [
+        "pinned"
+      ],
+      "scrollFrom": 0,
+      "scrollTo": 843,
+      "vpTopSlope": 0,
+      "bboxStart": {
+        "x": 0,
+        "y": 671,
+        "w": 390,
+        "h": 173
+      },
+      "bboxEnd": {
+        "x": 0,
+        "y": 671,
+        "w": 390,
+        "h": 173
+      },
+      "text": "built at sb hacks xiiteam:Stephen Hung•Matthew Kim•Janet Phe",
+      "sectionSlug": "01-homelibrarysign-inbuilt-with-reactthree-",
+      "csId": "222"
+    }
+  ],
+  "sectionBgColors": {
+    "01-homelibrarysign-inbuilt-with-reactthree-": "rgb(5, 10, 20)"
+  }
+}

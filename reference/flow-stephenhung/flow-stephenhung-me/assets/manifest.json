@@ -1,0 +1,22 @@
+[
+  {
+    "originalUrl": "https://flow.stephenhung.me/favicon.svg",
+    "localPath": "E:\\ASTRA- HH-2\\reference\\flow-stephenhung\\flow-stephenhung-me\\assets\\images\\21bc0b86-favicon.svg",
+    "type": "image",
+    "bytes": 694,
+    "mime": "image/svg+xml",
+    "format": "svg",
+    "ok": true,
+    "usedIn": []
+  },
+  {
+    "originalUrl": "https://fonts.gstatic.com/s/spacemono/v17/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ.woff2",
+    "localPath": "E:\\ASTRA- HH-2\\reference\\flow-stephenhung\\flow-stephenhung-me\\assets\\fonts\\39187352-i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ.woff2",
+    "type": "font",
+    "bytes": 9464,
+    "mime": "font/woff2",
+    "format": "woff2",
+    "ok": true,
+    "usedIn": []
+  }
+]

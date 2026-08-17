@@ -1,0 +1,486 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { Mic, Send, Globe, ChevronDown, Check, Sparkles, RotateCcw, LayoutGrid } from 'lucide-react';
+import { TextScramble } from './TextScramble';
+import { SupportedLanguage, LanguageOption, QueryResponse } from '../../types';
+import { FlowAnswerCard } from './FlowAnswerCard';
+import { FlowBenchmarkModal, BENCHMARK_QUESTIONS } from './FlowBenchmarkModal';
+
+interface FlowHeroProps {
+  onSearch: (query: string, lang: SupportedLanguage) => void;
+  isLoading: boolean;
+  queryResult?: QueryResponse | null;
+  onClearResult?: () => void;
+}
+
+const LANGUAGES: LanguageOption[] = [
+  { code: 'hi', name: 'Hindi', native: 'हिन्दी', speechLocale: 'hi-IN' },
+  { code: 'mr', name: 'Marathi', native: 'मराठी', speechLocale: 'mr-IN' },
+  { code: 'bn', name: 'Bengali', native: 'বাংলা', speechLocale: 'bn-IN' },
+  { code: 'te', name: 'Telugu', native: 'తెలుగు', speechLocale: 'te-IN' },
+  { code: 'ta', name: 'Tamil', native: 'தமிழ்', speechLocale: 'ta-IN' },
+  { code: 'en', name: 'English', native: 'English', speechLocale: 'en-US' },
+];
+
+const SUBTITLES = [
+  'voice-enabled multilingual indic rag',
+  'sub-200ms dense-sparse hybrid engine',
+  '6× rtx 2080 ti hardware accelerated',
+  'grounded citations over msmarco-xi',
+];
+
+export const FlowHero: React.FC<FlowHeroProps> = ({
+  onSearch,
+  isLoading,
+  queryResult = null,
+  onClearResult = () => {},
+}) => {
+  const [selectedLang, setSelectedLang] = useState<SupportedLanguage>('hi');
+  const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
+  const [isBenchmarkModalOpen, setIsBenchmarkModalOpen] = useState(false);
+  const [promptIdx, setPromptIdx] = useState(0);
+  const [isRecording, setIsRecording] = useState(false);
+  const [queryInput, setQueryInput] = useState('');
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [introKey, setIntroKey] = useState(0);
+  const [audioLevel, setAudioLevel] = useState(0);
+
+  // Typewriter effect for subtitle
+  const [subIdx, setSubIdx] = useState(0);
+  const [typedSub, setTypedSub] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const recognitionRef = useRef<any>(null);
+  const audioContextRef = useRef<AudioContext | null>(null);
+  const analyserRef = useRef<AnalyserNode | null>(null);
+  const streamRef = useRef<MediaStream | null>(null);
+  const animFrameRef = useRef<number | null>(null);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsLangDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Rotating prompt interval for placeholder suggestions
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPromptIdx((prev) => (prev + 1) % BENCHMARK_QUESTIONS.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Subtitle typewriter loop
+  useEffect(() => {
+    const fullText = SUBTITLES[subIdx];
+    let timer: any;
+
+    if (!isDeleting && typedSub !== fullText) {
+      timer = setTimeout(() => {
+        setTypedSub(fullText.substring(0, typedSub.length + 1));
+      }, 65);
+    } else if (!isDeleting && typedSub === fullText) {
+      timer = setTimeout(() => setIsDeleting(true), 2400);
+    } else if (isDeleting && typedSub !== '') {
+      timer = setTimeout(() => {
+        setTypedSub(fullText.substring(0, typedSub.length - 1));
+      }, 35);
+    } else if (isDeleting && typedSub === '') {
+      setIsDeleting(false);
+      setSubIdx((prev) => (prev + 1) % SUBTITLES.length);
+    }
+
+    return () => clearTimeout(timer);
+  }, [typedSub, isDeleting, subIdx]);
+
+  // Web Speech API
+  useEffect(() => {
+    const SpeechRecognition =
+      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      const recognition = new SpeechRecognition();
+      recognition.continuous = false;
+      recognition.interimResults = true;
+
+      recognition.onstart = () => {
+        setIsRecording(true);
+        startAudioVisualizer();
+      };
+
+      recognition.onresult = (event: any) => {
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          const transcript = event.results[i][0].transcript;
+          if (event.results[i].isFinal) {
+            setQueryInput(transcript);
+            onSearch(transcript, selectedLang);
+          } else {
+            setQueryInput(transcript);
+          }
+        }
+      };
+
+      recognition.onerror = () => {
+        setIsRecording(false);
+        stopAudioVisualizer();
+      };
+
+      recognition.onend = () => {
+        setIsRecording(false);
+        stopAudioVisualizer();
+      };
+
+      recognitionRef.current = recognition;
+    }
+  }, [selectedLang, onSearch]);
+
+  const startAudioVisualizer = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      streamRef.current = stream;
+
+      const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const analyser = audioCtx.createAnalyser();
+      analyser.fftSize = 64;
+
+      const source = audioCtx.createMediaStreamSource(stream);
+      source.connect(analyser);
+
+      audioContextRef.current = audioCtx;
+      analyserRef.current = analyser;
+
+      const dataArray = new Uint8Array(analyser.frequencyBinCount);
+
+      const updateLevel = () => {
+        if (!analyserRef.current) return;
+        analyserRef.current.getByteFrequencyData(dataArray);
+
+        let sum = 0;
+        for (let i = 0; i < dataArray.length; i++) {
+          sum += dataArray[i];
+        }
+        const avg = sum / dataArray.length;
+        setAudioLevel(Math.min(100, Math.round((avg / 128) * 100)));
+
+        animFrameRef.current = requestAnimationFrame(updateLevel);
+      };
+
+      updateLevel();
+    } catch (err) {
+      console.warn('Microphone stream audio context unavailable:', err);
+    }
+  };
+
+  const stopAudioVisualizer = () => {
+    if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
+    if (streamRef.current) {
+      streamRef.current.getTracks().forEach((t) => t.stop());
+      streamRef.current = null;
+    }
+    if (audioContextRef.current) {
+      audioContextRef.current.close().catch(() => {});
+      audioContextRef.current = null;
+    }
+    setAudioLevel(0);
+  };
+
+  const toggleMic = () => {
+    if (!recognitionRef.current) {
+      alert('Speech Recognition is supported on Chrome, Edge, and Safari over HTTPS.');
+      return;
+    }
+
+    if (isRecording) {
+      recognitionRef.current.stop();
+    } else {
+      const activeLangObj = LANGUAGES.find((l) => l.code === selectedLang) || LANGUAGES[0];
+      recognitionRef.current.lang = activeLangObj.speechLocale;
+      recognitionRef.current.start();
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!queryInput.trim() || isLoading) return;
+    onSearch(queryInput.trim(), selectedLang);
+  };
+
+  const handleSelectSample = (sampleText: string, lang: SupportedLanguage) => {
+    setQueryInput(sampleText);
+    setSelectedLang(lang);
+    onSearch(sampleText, lang);
+  };
+
+  const handleReplayIntro = () => {
+    setIntroKey((prev) => prev + 1);
+    setTypedSub('');
+    setIsDeleting(false);
+  };
+
+  const currentLangObj = LANGUAGES.find((l) => l.code === selectedLang) || LANGUAGES[0];
+
+  return (
+    <div
+      key={introKey}
+      className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center text-center select-none py-4 sm:py-8 space-y-4 sm:space-y-5 animate-fadeIn"
+    >
+      {/* 1. Sleek Floating Language Dropdown Pill */}
+      <div ref={dropdownRef} className="relative z-30">
+        <button
+          type="button"
+          onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-xs font-mono text-white backdrop-blur-xl shadow-lg transition-all duration-200 cursor-pointer group"
+        >
+          <Globe className="w-3.5 h-3.5 text-white/70 group-hover:text-white transition-colors" />
+          <span className="font-semibold">{currentLangObj.name}</span>
+          <span className="text-white/50 text-[11px]">({currentLangObj.native})</span>
+          <ChevronDown
+            className={`w-3.5 h-3.5 text-white/50 transition-transform duration-200 ${
+              isLangDropdownOpen ? 'rotate-180 text-white' : ''
+            }`}
+          />
+        </button>
+
+        {/* Floating Language Picker Menu */}
+        {isLangDropdownOpen && (
+          <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 w-56 rounded-2xl bg-[#060b19]/95 backdrop-blur-3xl border border-white/20 p-2 shadow-2xl space-y-1 text-left animate-fadeIn z-50">
+            <span className="text-[10px] uppercase tracking-wider font-mono text-white/40 px-3 py-1 block">
+              Select Language
+            </span>
+            {LANGUAGES.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => {
+                  setSelectedLang(lang.code);
+                  setIsLangDropdownOpen(false);
+                }}
+                className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-mono transition-all cursor-pointer ${
+                  selectedLang === lang.code
+                    ? 'bg-white text-black font-bold'
+                    : 'text-white/80 hover:bg-white/10 hover:text-white'
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  <span>{lang.name}</span>
+                  <span className={selectedLang === lang.code ? 'text-black/60' : 'text-white/40'}>
+                    ({lang.native})
+                  </span>
+                </div>
+                {selectedLang === lang.code && <Check className="w-3.5 h-3.5 text-black" />}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* 2. ASTRA Glowing Headline Title with Cyber Text Scramble */}
+      <div className="space-y-1.5 sm:space-y-2">
+        <h1
+          className="font-serif text-5xl sm:text-7xl md:text-8xl tracking-[0.14em] sm:tracking-[0.18em] text-white select-none transition-all duration-700 font-extrabold uppercase leading-tight"
+          style={{
+            textShadow: `
+              0 0 20px rgba(168, 85, 247, 0.6),
+              0 0 40px rgba(168, 85, 247, 0.4),
+              0 0 60px rgba(6, 182, 212, 0.3),
+              0 0 80px rgba(6, 182, 212, 0.2),
+              0 4px 8px rgba(0, 0, 0, 0.6)
+            `,
+            filter:
+              'drop-shadow(0 0 15px rgba(168, 85, 247, 0.5)) drop-shadow(0 0 30px rgba(6, 182, 212, 0.3))',
+          }}
+        >
+          <TextScramble text="astra" speed={80} delay={300} />
+        </h1>
+
+        {/* Typewriter Subtitle */}
+        <div className="text-[10px] sm:text-xs text-white/70 font-mono min-h-[1.5em] tracking-[0.05em] uppercase flex items-center justify-center px-2">
+          <span className="truncate">{typedSub}</span>
+          <span className="inline-block w-0.5 h-3.5 bg-cyan-400 ml-1 animate-pulse" />
+        </div>
+      </div>
+
+      {/* 3. Unified Input Capsule */}
+      <form onSubmit={handleSubmit} className="w-full max-w-xl px-1 sm:px-0">
+        <div className="relative flex items-center rounded-full bg-[#060b19]/80 backdrop-blur-2xl border border-white/25 shadow-[0_10px_30px_rgba(0,0,0,0.5)] focus-within:border-white/50 focus-within:shadow-glow-purple transition-all duration-300 p-1 sm:p-1.5">
+          {/* Glowing Mic Orb */}
+          <div className="relative pl-1">
+            <button
+              type="button"
+              onClick={toggleMic}
+              className={`w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer shadow-lg border ${
+                isRecording
+                  ? 'bg-white text-black shadow-white/60 scale-105 border-white'
+                  : 'bg-white/10 hover:bg-white/20 text-white border-white/20 hover:scale-105'
+              }`}
+              title={isRecording ? 'Listening... click to stop' : `Tap to speak in ${currentLangObj.name}`}
+            >
+              <Mic className="w-4 h-4 sm:w-5 sm:h-5" />
+            </button>
+
+            {isRecording && (
+              <span className="absolute inset-0 rounded-full border-2 border-cyan-400 animate-ping opacity-75 pointer-events-none" />
+            )}
+          </div>
+
+          {/* Text Input / Live Visualizer / Dynamic Rotating Placeholder */}
+          <div className="flex-1 px-3 sm:px-4 min-w-0">
+            {isRecording ? (
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-xs text-cyan-300 animate-pulse truncate">
+                  {queryInput || `Listening in ${currentLangObj.name}...`}
+                </span>
+                {/* Reactive Equalizer Bars */}
+                <div className="flex items-center gap-0.5 sm:gap-1 pl-1">
+                  {[20, 50, 80, 40, 90, 60, 30].map((h, i) => (
+                    <div
+                      key={i}
+                      className="w-0.5 sm:w-1 bg-gradient-to-t from-purple-500 to-cyan-400 rounded-full transition-all duration-100"
+                      style={{ height: `${Math.max(3, (audioLevel / 100) * (h * 0.8))}px` }}
+                    />
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <input
+                type="text"
+                value={queryInput}
+                onChange={(e) => setQueryInput(e.target.value)}
+                placeholder={`Try: "${BENCHMARK_QUESTIONS[promptIdx].text}"`}
+                className="w-full bg-transparent text-white placeholder-white/40 font-mono text-xs sm:text-sm focus:outline-none"
+              />
+            )}
+          </div>
+
+          {/* Submit Action Button */}
+          <div className="pr-1">
+            <button
+              type="submit"
+              disabled={isLoading || !queryInput.trim()}
+              className="p-2.5 sm:p-3 rounded-full bg-white text-black hover:bg-white/90 disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-md cursor-pointer font-bold"
+            >
+              {isLoading ? (
+                <div className="w-3.5 h-3.5 border-2 border-black/30 border-t-black rounded-full animate-spin" />
+              ) : (
+                <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              )}
+            </button>
+          </div>
+        </div>
+      </form>
+
+      {/* 4. Sliding Infinite Carousel with Left-Right Gradient Fade Masks */}
+      <div className="w-full max-w-xl space-y-2">
+        <div className="flex items-center justify-between text-[10px] font-mono text-white/50 px-2">
+          <span className="flex items-center gap-1.5">
+            <Sparkles className="w-3 h-3 text-cyan-400" />
+            <span>Instant Benchmark Questions</span>
+          </span>
+
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setIsBenchmarkModalOpen(true)}
+              className="flex items-center gap-1 text-cyan-300 hover:text-cyan-200 transition-colors cursor-pointer font-bold"
+              title="Open full benchmark questions library"
+            >
+              <LayoutGrid className="w-3 h-3" />
+              <span>browse all (18)</span>
+            </button>
+
+            <button
+              onClick={handleReplayIntro}
+              className="flex items-center gap-1 hover:text-white text-white/40 transition-colors cursor-pointer"
+            >
+              <RotateCcw className="w-3 h-3" />
+              <span>replay</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Carousel with Edge Fade Gradient Mask to prevent harsh text clipping */}
+        <div
+          className="w-full overflow-hidden relative py-1"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+          }}
+        >
+          <div className="flex gap-2 overflow-x-auto no-scrollbar py-1 px-4 scroll-smooth">
+            {BENCHMARK_QUESTIONS.map((sample, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleSelectSample(sample.text, sample.lang)}
+                disabled={isLoading}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#060b19]/80 hover:bg-[#060b19] backdrop-blur-xl border border-white/15 hover:border-white/40 text-white/80 hover:text-white text-xs font-mono whitespace-nowrap shrink-0 transition-all cursor-pointer shadow-md hover:scale-105 group"
+              >
+                <span className="text-[9px] uppercase font-bold text-cyan-300 px-1 py-0.2 rounded bg-white/10">
+                  {sample.lang}
+                </span>
+                <span className="text-white/90 group-hover:text-white">{sample.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* 5. Collapsible Hardware Specs Toggle */}
+      <div className="flex flex-col items-center pt-1">
+        <button
+          type="button"
+          onClick={() => setShowAdvanced(!showAdvanced)}
+          className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 text-white/50 hover:text-white transition-all font-mono text-[11px] cursor-pointer"
+        >
+          <Sparkles className="w-3 h-3 text-cyan-400" />
+          <span>hardware parameters</span>
+          <ChevronDown
+            className={`w-3 h-3 transition-transform duration-300 ${
+              showAdvanced ? 'rotate-180' : ''
+            }`}
+          />
+        </button>
+
+        {showAdvanced && (
+          <div className="mt-2 p-3.5 rounded-2xl bg-[#060b19]/95 backdrop-blur-3xl border border-white/20 text-xs font-mono text-white/80 space-y-1.5 max-w-sm text-left shadow-2xl animate-fadeIn">
+            <div className="flex justify-between items-center">
+              <span className="text-white/60">Embedding Engine:</span>
+              <span className="text-white font-bold">bge-m3 (cuda:1)</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-white/60">Generator LLM:</span>
+              <span className="text-white font-bold">Qwen 2.5-3B (cuda:2)</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-white/60">Cross-Reranker:</span>
+              <span className="text-white font-bold">bge-reranker-v2-m3</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-white/60">Indices in 512GB RAM:</span>
+              <span className="text-white font-bold">5× Dense + 5× Sparse</span>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* 6. Answer Card (Floats smoothly in view when query answered) */}
+      {queryResult && (
+        <div className="w-full pt-4 animate-fadeIn">
+          <FlowAnswerCard
+            result={queryResult}
+            language={selectedLang}
+            onClear={onClearResult}
+          />
+        </div>
+      )}
+
+      {/* 7. Benchmark Modal Library */}
+      <FlowBenchmarkModal
+        isOpen={isBenchmarkModalOpen}
+        onClose={() => setIsBenchmarkModalOpen(false)}
+        onSelectPrompt={handleSelectSample}
+      />
+    </div>
+  );
+};

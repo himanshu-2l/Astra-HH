@@ -1,0 +1,37 @@
+{
+  "url": "https://flow.stephenhung.me/",
+  "capturedAt": "2026-08-17T14:37:28.456Z",
+  "name": "flow-stephenhung-me",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "pageTitle": "flow | voice-guided 3d exploration",
+  "stack": {
+    "framework": "unknown",
+    "framerMotion": false,
+    "framer": false,
+    "webflow": false,
+    "lenis": false,
+    "gsap": false,
+    "three": true,
+    "splineRuntime": false,
+    "notes": []
+  },
+  "sectionCount": 1,
+  "animationCount": 289,
+  "assetCount": 2
+}

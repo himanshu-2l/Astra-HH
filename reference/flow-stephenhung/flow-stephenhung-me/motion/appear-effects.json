@@ -1,0 +1,293 @@
+{
+  "effects": [
+    {
+      "id": "appear-0",
+      "csId": "6",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-1",
+      "csId": "28",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "opacity": "0"
+      },
+      "rawStyle": "opacity: 0;"
+    },
+    {
+      "id": "appear-2",
+      "csId": "33",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-3",
+      "csId": "37",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-4",
+      "csId": "41",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-5",
+      "csId": "45",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-6",
+      "csId": "49",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-7",
+      "csId": "53",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-8",
+      "csId": "57",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-9",
+      "csId": "61",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-10",
+      "csId": "65",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-11",
+      "csId": "69",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-12",
+      "csId": "73",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-13",
+      "csId": "77",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-14",
+      "csId": "88",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-15",
+      "csId": "95",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-16",
+      "csId": "101",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "filter": "grayscale(1)",
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "filter: grayscale(1); opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-17",
+      "csId": "181",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-18",
+      "csId": "184",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "letter-spacing: 0.02em; margin-top: 0.75rem; opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-19",
+      "csId": "187",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "margin-top: 2rem; opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-20",
+      "csId": "200",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-21",
+      "csId": "209",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "perspective: 1000px; transform-style: preserve-3d; display: inline-block; opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-22",
+      "csId": "211",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-23",
+      "csId": "222",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "opacity": "0",
+        "transform": "none"
+      },
+      "rawStyle": "opacity: 0; transform: none;"
+    },
+    {
+      "id": "appear-24",
+      "csId": "223",
+      "framerName": null,
+      "appearId": null,
+      "initial": {
+        "opacity": "0"
+      },
+      "rawStyle": "opacity: 0;"
+    }
+  ],
+  "rawBlock": null
+}

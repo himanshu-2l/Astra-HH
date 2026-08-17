@@ -30,6 +30,15 @@ export interface SourceChunk {
   metadata?: Record<string, any>;
 }
 
+export interface GuardrailStatus {
+  passed: boolean;
+  reason?: string;
+  gate?: string;
+  injection_detected?: boolean;
+  out_of_domain?: boolean;
+  grounding_failed?: boolean;
+}
+
 export interface QueryResponse {
   query: string;
   language: string;
@@ -37,11 +46,7 @@ export interface QueryResponse {
   citations: number[];
   sources: SourceChunk[];
   latency: LatencyBreakdown;
-  guardrails: {
-    passed: boolean;
-    reason?: string;
-    gate?: string;
-  };
+  guardrails: GuardrailStatus;
 }
 
 export interface HealthResponse {

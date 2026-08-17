@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "01-homelibrarysign-inbuilt-with-reactthree-",
+    "totalAnimated": 284,
+    "cdpFired": 5,
+    "hasParallax": false,
+    "hasMarquee": false,
+    "hasCharStagger": false,
+    "hasViewportFade": false,
+    "staggerGroups": [],
+    "dominantEasing": "ease",
+    "dominantDurationMs": 300,
+    "notable": [
+      "49 hover state(s): transform, color, backgroundColor, filter, opacity (timing typically 0.15s cubic-bezier(0.4, 0, 0.2, 1))"
+    ]
+  }
+]
