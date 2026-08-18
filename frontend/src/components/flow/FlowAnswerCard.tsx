@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Sparkles, CheckCircle2, ChevronDown, Activity, X } from 'lucide-react';
 import { QueryResponse, SupportedLanguage } from '../../types';
+import { MultilingualAudioPlayer } from '../MultilingualAudioPlayer';
 
 interface FlowAnswerCardProps {
   result: QueryResponse;
@@ -91,6 +92,13 @@ export const FlowAnswerCard: React.FC<FlowAnswerCardProps> = ({ result, language
       <div className="font-sans text-sm sm:text-base leading-relaxed text-slate-100 selection:bg-cyan-500/30">
         {renderAnswerWithCitations(result.answer)}
       </div>
+
+      {/* Multilingual Voice Synthesizer Audio Player (Speaker) */}
+      {result.answer && (
+        <div className="pt-1">
+          <MultilingualAudioPlayer text={result.answer} language={language} autoPlay={false} />
+        </div>
+      )}
 
       {/* Latency & Retrieval SLA Badge Strip */}
       <div className="flex flex-wrap items-center justify-between gap-2 pt-2 text-xs font-mono text-slate-300 border-t border-slate-700/80">

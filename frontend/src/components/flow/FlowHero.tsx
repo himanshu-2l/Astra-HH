@@ -53,9 +53,6 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
 
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const recognitionRef = useRef<any>(null);
-  const audioContextRef = useRef<AudioContext | null>(null);
-  const analyserRef = useRef<AnalyserNode | null>(null);
-  const streamRef = useRef<MediaStream | null>(null);
   const animFrameRef = useRef<number | null>(null);
 
   // Close dropdown on outside click
@@ -104,104 +101,148 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
   useEffect(() => {
     const SpeechRecognition =
       (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (SpeechRecognition) {
+    if (!SpeechRecognition) return;
+
+    try {
       const recognition = new SpeechRecognition();
       recognition.continuous = false;
       recognition.interimResults = true;
 
       recognition.onstart = () => {
         setIsRecording(true);
-        startAudioVisualizer();
+        startVisualizerAnimation();
       };
 
       recognition.onresult = (event: any) => {
+        let fullTranscript = '';
+        let isFinalResult = false;
+
         for (let i = event.resultIndex; i < event.results.length; ++i) {
           const transcript = event.results[i][0].transcript;
+          fullTranscript += transcript;
           if (event.results[i].isFinal) {
-            setQueryInput(transcript);
-            onSearch(transcript, selectedLang);
-          } else {
-            setQueryInput(transcript);
+            isFinalResult = true;
           }
+        }
+
+        if (fullTranscript.trim()) {
+          setQueryInput(fullTranscript);
+        }
+
+        if (isFinalResult && fullTranscript.trim()) {
+          setIsRecording(false);
+          stopVisualizerAnimation();
+          onSearch(fullTranscript.trim(), selectedLang);
         }
       };
 
-      recognition.onerror = () => {
+      recognition.onerror = (event: any) => {
+        console.warn('Speech recognition status:', event?.error);
         setIsRecording(false);
-        stopAudioVisualizer();
+        stopVisualizerAnimation();
+        if (event?.error === 'not-allowed') {
+          alert('Microphone access was denied. Please allow microphone permissions in your browser to use voice input.');
+        }
       };
 
       recognition.onend = () => {
         setIsRecording(false);
-        stopAudioVisualizer();
+        stopVisualizerAnimation();
       };
 
       recognitionRef.current = recognition;
+    } catch (e) {
+      console.warn('SpeechRecognition initialization error:', e);
     }
+
+    return () => {
+      stopVisualizerAnimation();
+    };
   }, [selectedLang, onSearch]);
 
-  const startAudioVisualizer = async () => {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      streamRef.current = stream;
-
-      const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
-      const analyser = audioCtx.createAnalyser();
-      analyser.fftSize = 64;
-
-      const source = audioCtx.createMediaStreamSource(stream);
-      source.connect(analyser);
-
-      audioContextRef.current = audioCtx;
-      analyserRef.current = analyser;
-
-      const dataArray = new Uint8Array(analyser.frequencyBinCount);
-
-      const updateLevel = () => {
-        if (!analyserRef.current) return;
-        analyserRef.current.getByteFrequencyData(dataArray);
-
-        let sum = 0;
-        for (let i = 0; i < dataArray.length; i++) {
-          sum += dataArray[i];
-        }
-        const avg = sum / dataArray.length;
-        setAudioLevel(Math.min(100, Math.round((avg / 128) * 100)));
-
-        animFrameRef.current = requestAnimationFrame(updateLevel);
-      };
-
-      updateLevel();
-    } catch (err) {
-      console.warn('Microphone stream audio context unavailable:', err);
-    }
+  const startVisualizerAnimation = () => {
+    let frame = 0;
+    const animate = () => {
+      frame++;
+      // Generate fluid synthetic audio levels for visual feedback without hardware collisions
+      const level = Math.sin(frame * 0.15) * 35 + Math.cos(frame * 0.25) * 30 + 35;
+      setAudioLevel(Math.min(100, Math.max(10, Math.round(level))));
+      animFrameRef.current = requestAnimationFrame(animate);
+    };
+    animFrameRef.current = requestAnimationFrame(animate);
   };
 
-  const stopAudioVisualizer = () => {
-    if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
-    if (streamRef.current) {
-      streamRef.current.getTracks().forEach((t) => t.stop());
-      streamRef.current = null;
-    }
-    if (audioContextRef.current) {
-      audioContextRef.current.close().catch(() => {});
-      audioContextRef.current = null;
+  const stopVisualizerAnimation = () => {
+    if (animFrameRef.current) {
+      cancelAnimationFrame(animFrameRef.current);
+      animFrameRef.current = null;
     }
     setAudioLevel(0);
   };
 
   const toggleMic = () => {
-    if (!recognitionRef.current) {
-      alert('Speech Recognition is supported on Chrome, Edge, and Safari over HTTPS.');
+    const SpeechRecognition =
+      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      alert('Speech Recognition is supported on Google Chrome, Microsoft Edge, and Safari over HTTPS.');
       return;
     }
 
     if (isRecording) {
-      recognitionRef.current.stop();
+      try {
+        recognitionRef.current?.stop();
+      } catch (e) {}
+      setIsRecording(false);
+      stopVisualizerAnimation();
     } else {
-      const activeLangObj = LANGUAGES.find((l) => l.code === selectedLang) || LANGUAGES[0];
-      recognitionRef.current.lang = activeLangObj.speechLocale;
-      recognitionRef.current.start();
+      try {
+        const activeLangObj = LANGUAGES.find((l) => l.code === selectedLang) || LANGUAGES[0];
+        if (recognitionRef.current) {
+          recognitionRef.current.lang = activeLangObj.speechLocale;
+          recognitionRef.current.start();
+        }
+      } catch (e) {
+        console.warn('Speech recognition start error, recreating instance...', e);
+        try {
+          const rec = new SpeechRecognition();
+          rec.continuous = false;
+          rec.interimResults = true;
+          const activeLangObj = LANGUAGES.find((l) => l.code === selectedLang) || LANGUAGES[0];
+          rec.lang = activeLangObj.speechLocale;
+          rec.onstart = () => {
+            setIsRecording(true);
+            startVisualizerAnimation();
+          };
+          rec.onresult = (event: any) => {
+            let fullTranscript = '';
+            let isFinalResult = false;
+            for (let i = event.resultIndex; i < event.results.length; ++i) {
+              const transcript = event.results[i][0].transcript;
+              fullTranscript += transcript;
+              if (event.results[i].isFinal) isFinalResult = true;
+            }
+            if (fullTranscript.trim()) setQueryInput(fullTranscript);
+            if (isFinalResult && fullTranscript.trim()) {
+              setIsRecording(false);
+              stopVisualizerAnimation();
+              onSearch(fullTranscript.trim(), selectedLang);
+            }
+          };
+          rec.onerror = () => {
+            setIsRecording(false);
+            stopVisualizerAnimation();
+          };
+          rec.onend = () => {
+            setIsRecording(false);
+            stopVisualizerAnimation();
+          };
+          recognitionRef.current = rec;
+          rec.start();
+        } catch (err) {
+          console.error('Failed to start speech recognition:', err);
+        }
+      }
     }
   };
 
