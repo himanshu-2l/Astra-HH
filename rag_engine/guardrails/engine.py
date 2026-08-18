@@ -11,7 +11,7 @@ BLOCKED_PATTERNS = [
 ]
 
 class GuardrailEngine:
-    def __init__(self, min_relevance_threshold: float = 0.20):
+    def __init__(self, min_relevance_threshold: float = 0.04):
         self.min_relevance_threshold = min_relevance_threshold
 
     def check_input_safety(self, query: str) -> Tuple[bool, str]:
