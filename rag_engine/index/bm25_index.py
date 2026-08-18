@@ -33,3 +33,7 @@ class BM25IndexManager:
         query_tokens = bm25s.tokenize([query], stopwords="en")
         doc_ids, scores = self.indices[strategy].retrieve(query_tokens, k=top_k)
         return doc_ids[0].tolist(), scores[0].tolist()
+
+    def search_strategy_tokens(self, strategy: str, query_tokens: Any, top_k: int = 50) -> Tuple[List[int], List[float]]:
+        doc_ids, scores = self.indices[strategy].retrieve(query_tokens, k=top_k)
+        return doc_ids[0].tolist(), scores[0].tolist()

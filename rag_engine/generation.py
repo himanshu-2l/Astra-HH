@@ -36,8 +36,9 @@ class LLMClient:
             resp = await self.client.post("/chat/completions", json={
                 "model": self.model_name,
                 "messages": messages,
-                "max_tokens": 256,
+                "max_tokens": 80,
                 "temperature": 0.1,
+                "stop": ["\n\n", "User Question:", "Context:"],
                 "stream": False
             })
             resp.raise_for_status()

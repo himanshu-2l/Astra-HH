@@ -14,18 +14,21 @@ class GPUReranker:
         ).to(device)
         self.model.eval()
         
-        # GPU Warmup to eliminate CUDA kernel cold-start latency
-        dummy_inputs = self.tokenizer([["warmup query", "warmup passage"]], return_tensors="pt").to(device)
+        # Multi-batch GPU Warmup to eliminate CUDA kernel cold-start latency
+        print("🔥 Warming up cross-encoder CUDA kernels...")
+        dummy_pairs = [["warmup query", f"warmup passage {i}"] for i in range(10)]
+        dummy_inputs = self.tokenizer(dummy_pairs, padding=True, truncation=True, max_length=256, return_tensors="pt").to(device)
         with torch.no_grad():
             self.model(**dummy_inputs)
+        torch.cuda.empty_cache()
         print(f"Re-ranker model warmed up and ready on {device}!")
 
     @torch.no_grad()
-    def rerank(self, query: str, candidates: List[Dict[str, Any]], top_k: int = 5, max_candidates: int = 20) -> List[Dict[str, Any]]:
+    def rerank(self, query: str, candidates: List[Dict[str, Any]], top_k: int = 5, max_candidates: int = 10) -> List[Dict[str, Any]]:
         if not candidates:
             return []
         
-        # Take top 20 candidates for high-speed sub-25ms cross-attention
+        # Take top 10 candidates for blazing fast sub-10ms cross-attention
         eval_candidates = candidates[:max_candidates]
         pairs = [[query, c["text"]] for c in eval_candidates]
         
