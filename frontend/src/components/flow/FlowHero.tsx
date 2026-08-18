@@ -97,75 +97,22 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
     return () => clearTimeout(timer);
   }, [typedSub, isDeleting, subIdx]);
 
-  // Web Speech API
+  // Stop speech recognition on unmount
   useEffect(() => {
-    const SpeechRecognition =
-      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SpeechRecognition) return;
-
-    try {
-      const recognition = new SpeechRecognition();
-      recognition.continuous = false;
-      recognition.interimResults = true;
-
-      recognition.onstart = () => {
-        setIsRecording(true);
-        startVisualizerAnimation();
-      };
-
-      recognition.onresult = (event: any) => {
-        let fullTranscript = '';
-        let isFinalResult = false;
-
-        for (let i = event.resultIndex; i < event.results.length; ++i) {
-          const transcript = event.results[i][0].transcript;
-          fullTranscript += transcript;
-          if (event.results[i].isFinal) {
-            isFinalResult = true;
-          }
-        }
-
-        if (fullTranscript.trim()) {
-          setQueryInput(fullTranscript);
-        }
-
-        if (isFinalResult && fullTranscript.trim()) {
-          setIsRecording(false);
-          stopVisualizerAnimation();
-          onSearch(fullTranscript.trim(), selectedLang);
-        }
-      };
-
-      recognition.onerror = (event: any) => {
-        console.warn('Speech recognition status:', event?.error);
-        setIsRecording(false);
-        stopVisualizerAnimation();
-        if (event?.error === 'not-allowed') {
-          alert('Microphone access was denied. Please allow microphone permissions in your browser to use voice input.');
-        }
-      };
-
-      recognition.onend = () => {
-        setIsRecording(false);
-        stopVisualizerAnimation();
-      };
-
-      recognitionRef.current = recognition;
-    } catch (e) {
-      console.warn('SpeechRecognition initialization error:', e);
-    }
-
     return () => {
       stopVisualizerAnimation();
+      try {
+        recognitionRef.current?.abort();
+      } catch (e) {}
     };
-  }, [selectedLang, onSearch]);
+  }, []);
 
   const startVisualizerAnimation = () => {
+    if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
     let frame = 0;
     const animate = () => {
       frame++;
-      // Generate fluid synthetic audio levels for visual feedback without hardware collisions
-      const level = Math.sin(frame * 0.15) * 35 + Math.cos(frame * 0.25) * 30 + 35;
+      const level = Math.sin(frame * 0.18) * 35 + Math.cos(frame * 0.28) * 30 + 35;
       setAudioLevel(Math.min(100, Math.max(10, Math.round(level))));
       animFrameRef.current = requestAnimationFrame(animate);
     };
@@ -185,7 +132,7 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
       (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
-      alert('Speech Recognition is supported on Google Chrome, Microsoft Edge, and Safari over HTTPS.');
+      alert('Voice input is supported in Google Chrome, Microsoft Edge, and Safari on HTTPS.');
       return;
     }
 
@@ -197,51 +144,68 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
       stopVisualizerAnimation();
     } else {
       try {
-        const activeLangObj = LANGUAGES.find((l) => l.code === selectedLang) || LANGUAGES[0];
+        // Abort previous instance if any
         if (recognitionRef.current) {
-          recognitionRef.current.lang = activeLangObj.speechLocale;
-          recognitionRef.current.start();
+          try {
+            recognitionRef.current.abort();
+          } catch (e) {}
         }
-      } catch (e) {
-        console.warn('Speech recognition start error, recreating instance...', e);
-        try {
-          const rec = new SpeechRecognition();
-          rec.continuous = false;
-          rec.interimResults = true;
-          const activeLangObj = LANGUAGES.find((l) => l.code === selectedLang) || LANGUAGES[0];
-          rec.lang = activeLangObj.speechLocale;
-          rec.onstart = () => {
-            setIsRecording(true);
-            startVisualizerAnimation();
-          };
-          rec.onresult = (event: any) => {
-            let fullTranscript = '';
-            let isFinalResult = false;
-            for (let i = event.resultIndex; i < event.results.length; ++i) {
-              const transcript = event.results[i][0].transcript;
-              fullTranscript += transcript;
-              if (event.results[i].isFinal) isFinalResult = true;
+
+        const rec = new SpeechRecognition();
+        rec.continuous = false;
+        rec.interimResults = true;
+
+        const activeLangObj = LANGUAGES.find((l) => l.code === selectedLang) || LANGUAGES[0];
+        rec.lang = activeLangObj.speechLocale;
+
+        rec.onstart = () => {
+          setIsRecording(true);
+          startVisualizerAnimation();
+        };
+
+        rec.onresult = (event: any) => {
+          let fullTranscript = '';
+          let isFinalResult = false;
+
+          for (let i = event.resultIndex; i < event.results.length; ++i) {
+            const transcript = event.results[i][0].transcript;
+            fullTranscript += transcript;
+            if (event.results[i].isFinal) {
+              isFinalResult = true;
             }
-            if (fullTranscript.trim()) setQueryInput(fullTranscript);
-            if (isFinalResult && fullTranscript.trim()) {
-              setIsRecording(false);
-              stopVisualizerAnimation();
-              onSearch(fullTranscript.trim(), selectedLang);
-            }
-          };
-          rec.onerror = () => {
+          }
+
+          if (fullTranscript.trim()) {
+            setQueryInput(fullTranscript);
+          }
+
+          if (isFinalResult && fullTranscript.trim()) {
             setIsRecording(false);
             stopVisualizerAnimation();
-          };
-          rec.onend = () => {
-            setIsRecording(false);
-            stopVisualizerAnimation();
-          };
-          recognitionRef.current = rec;
-          rec.start();
-        } catch (err) {
-          console.error('Failed to start speech recognition:', err);
-        }
+            onSearch(fullTranscript.trim(), selectedLang);
+          }
+        };
+
+        rec.onerror = (event: any) => {
+          console.warn('Speech recognition status:', event?.error);
+          setIsRecording(false);
+          stopVisualizerAnimation();
+          if (event?.error === 'not-allowed') {
+            alert('Microphone access was denied. Please allow microphone permissions in your browser.');
+          }
+        };
+
+        rec.onend = () => {
+          setIsRecording(false);
+          stopVisualizerAnimation();
+        };
+
+        recognitionRef.current = rec;
+        rec.start();
+      } catch (err) {
+        console.error('Failed to start speech recognition:', err);
+        setIsRecording(false);
+        stopVisualizerAnimation();
       }
     }
   };
