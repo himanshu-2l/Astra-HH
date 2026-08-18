@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Mic, Send, Globe, ChevronDown, Check, Sparkles, RotateCcw, LayoutGrid } from 'lucide-react';
+import { Mic, Send, Globe, ChevronDown, Check, Sparkles, RotateCcw, LayoutGrid, ChevronUp, ArrowRight } from 'lucide-react';
 import { TextScramble } from './TextScramble';
 import { SupportedLanguage, LanguageOption, QueryResponse } from '../../types';
 import { FlowAnswerCard } from './FlowAnswerCard';
-import { FlowBenchmarkModal, BENCHMARK_QUESTIONS } from './FlowBenchmarkModal';
+import { BENCHMARK_QUESTIONS } from './FlowBenchmarkModal';
 
 interface FlowHeroProps {
   onSearch: (query: string, lang: SupportedLanguage) => void;
@@ -36,7 +36,9 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
 }) => {
   const [selectedLang, setSelectedLang] = useState<SupportedLanguage>('hi');
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
-  const [isBenchmarkModalOpen, setIsBenchmarkModalOpen] = useState(false);
+  const [isExpandedBenchmarks, setIsExpandedBenchmarks] = useState(false);
+  const [benchmarkLangFilter, setBenchmarkLangFilter] = useState<string>('All');
+  const [benchmarkCategoryFilter, setBenchmarkCategoryFilter] = useState<string>('All');
   const [promptIdx, setPromptIdx] = useState(0);
   const [isRecording, setIsRecording] = useState(false);
   const [queryInput, setQueryInput] = useState('');
@@ -223,10 +225,27 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
 
   const currentLangObj = LANGUAGES.find((l) => l.code === selectedLang) || LANGUAGES[0];
 
+  const categories = ['All', 'Tech', 'Science', 'Agriculture', 'History', 'Literature'];
+  const langFilters = [
+    { code: 'All', name: 'All' },
+    { code: 'hi', name: 'Hindi' },
+    { code: 'mr', name: 'Marathi' },
+    { code: 'bn', name: 'Bengali' },
+    { code: 'te', name: 'Telugu' },
+    { code: 'ta', name: 'Tamil' },
+    { code: 'en', name: 'English' },
+  ];
+
+  const filteredExpandedQuestions = BENCHMARK_QUESTIONS.filter((q) => {
+    const matchesCategory = benchmarkCategoryFilter === 'All' || q.category === benchmarkCategoryFilter;
+    const matchesLang = benchmarkLangFilter === 'All' || q.lang === benchmarkLangFilter;
+    return matchesCategory && matchesLang;
+  });
+
   return (
     <div
       key={introKey}
-      className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center text-center select-none py-4 sm:py-8 space-y-4 sm:space-y-5 animate-fadeIn"
+      className="w-full max-w-3xl mx-auto flex flex-col items-center justify-center text-center select-none py-4 sm:py-6 space-y-4 sm:space-y-5 animate-fadeIn"
     >
       {/* 1. Sleek Floating Language Dropdown Pill */}
       <div ref={dropdownRef} className="relative z-30">
@@ -372,8 +391,8 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
         </div>
       </form>
 
-      {/* 4. Sliding Infinite Carousel with Left-Right Gradient Fade Masks */}
-      <div className="w-full max-w-xl space-y-2">
+      {/* 4. In-Page Smooth Expandable Benchmark Section */}
+      <div className="w-full max-w-2xl space-y-2.5 transition-all duration-500">
         <div className="flex items-center justify-between text-[10px] font-mono text-white/50 px-2">
           <span className="flex items-center gap-1.5">
             <Sparkles className="w-3 h-3 text-cyan-400" />
@@ -382,12 +401,17 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
 
           <div className="flex items-center gap-3">
             <button
-              onClick={() => setIsBenchmarkModalOpen(true)}
-              className="flex items-center gap-1 text-cyan-300 hover:text-cyan-200 transition-colors cursor-pointer font-bold"
-              title="Open full benchmark questions library"
+              onClick={() => setIsExpandedBenchmarks(!isExpandedBenchmarks)}
+              className="flex items-center gap-1 text-cyan-300 hover:text-white transition-colors cursor-pointer font-bold bg-white/10 hover:bg-white/15 px-2.5 py-1 rounded-full border border-white/15 shadow-sm"
+              title="Expand full benchmark grid directly on page"
             >
-              <LayoutGrid className="w-3 h-3" />
-              <span>browse all (18)</span>
+              <LayoutGrid className="w-3 h-3 text-cyan-400" />
+              <span>{isExpandedBenchmarks ? 'collapse' : 'browse all (18)'}</span>
+              {isExpandedBenchmarks ? (
+                <ChevronUp className="w-3 h-3" />
+              ) : (
+                <ChevronDown className="w-3 h-3" />
+              )}
             </button>
 
             <button
@@ -400,30 +424,118 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
           </div>
         </div>
 
-        {/* Carousel with Edge Fade Gradient Mask to prevent harsh text clipping */}
-        <div
-          className="w-full overflow-hidden relative py-1"
-          style={{
-            maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-          }}
-        >
-          <div className="flex gap-2 overflow-x-auto no-scrollbar py-1 px-4 scroll-smooth">
-            {BENCHMARK_QUESTIONS.map((sample, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleSelectSample(sample.text, sample.lang)}
-                disabled={isLoading}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#060b19]/80 hover:bg-[#060b19] backdrop-blur-xl border border-white/15 hover:border-white/40 text-white/80 hover:text-white text-xs font-mono whitespace-nowrap shrink-0 transition-all cursor-pointer shadow-md hover:scale-105 group"
-              >
-                <span className="text-[9px] uppercase font-bold text-cyan-300 px-1 py-0.2 rounded bg-white/10">
-                  {sample.lang}
-                </span>
-                <span className="text-white/90 group-hover:text-white">{sample.label}</span>
-              </button>
-            ))}
+        {/* Collapsed Mode: Smooth Gradient Edge-Fade Slider */}
+        {!isExpandedBenchmarks && (
+          <div
+            className="w-full overflow-hidden relative py-1 animate-fadeIn"
+            style={{
+              maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+            }}
+          >
+            <div className="flex gap-2 overflow-x-auto no-scrollbar py-1 px-4 scroll-smooth">
+              {BENCHMARK_QUESTIONS.map((sample, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleSelectSample(sample.text, sample.lang)}
+                  disabled={isLoading}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#060b19]/80 hover:bg-[#060b19] backdrop-blur-xl border border-white/15 hover:border-white/40 text-white/80 hover:text-white text-xs font-mono whitespace-nowrap shrink-0 transition-all cursor-pointer shadow-md hover:scale-105 group"
+                >
+                  <span className="text-[9px] uppercase font-bold text-cyan-300 px-1 py-0.2 rounded bg-white/10">
+                    {sample.lang}
+                  </span>
+                  <span className="text-white/90 group-hover:text-white">{sample.label}</span>
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
+
+        {/* Expanded Mode: In-Page 2-Column Frosted Grid (Zero Popup Windows) */}
+        {isExpandedBenchmarks && (
+          <div className="w-full rounded-3xl bg-[#070c18]/92 backdrop-blur-2xl border border-white/15 p-4 sm:p-5 shadow-[0_20px_50px_rgba(0,0,0,0.9)] space-y-3.5 text-left animate-fadeIn">
+            {/* Filter Strips */}
+            <div className="space-y-2 border-b border-white/10 pb-3 font-mono text-xs">
+              {/* Language Filters */}
+              <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5">
+                <Globe className="w-3.5 h-3.5 text-white/40 shrink-0 mr-1" />
+                {langFilters.map((lf) => {
+                  const isActive = benchmarkLangFilter === lf.code;
+                  return (
+                    <button
+                      key={lf.code}
+                      onClick={() => setBenchmarkLangFilter(lf.code)}
+                      className={`px-3 py-1 rounded-full text-xs font-mono transition-all shrink-0 cursor-pointer ${
+                        isActive
+                          ? 'bg-white text-black font-bold shadow-[0_0_15px_rgba(255,255,255,0.4)] scale-105'
+                          : 'bg-white/[0.06] hover:bg-white/15 text-white/70 hover:text-white border border-white/10'
+                      }`}
+                    >
+                      {lf.name}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Category Filters */}
+              <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+                <Sparkles className="w-3.5 h-3.5 text-cyan-400 shrink-0 mr-1" />
+                {categories.map((cat) => {
+                  const isActive = benchmarkCategoryFilter === cat;
+                  return (
+                    <button
+                      key={cat}
+                      onClick={() => setBenchmarkCategoryFilter(cat)}
+                      className={`px-3 py-1 rounded-full text-xs font-mono transition-all shrink-0 cursor-pointer ${
+                        isActive
+                          ? 'bg-white text-black font-bold shadow-[0_0_15px_rgba(255,255,255,0.4)] scale-105'
+                          : 'bg-white/[0.06] hover:bg-white/15 text-white/60 hover:text-white border border-white/10'
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* 2-Column Prompt Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-72 overflow-y-auto no-scrollbar pr-0.5">
+              {filteredExpandedQuestions.map((q, idx) => (
+                <div
+                  key={idx}
+                  onClick={() => {
+                    handleSelectSample(q.text, q.lang);
+                  }}
+                  className="p-3 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-white/30 transition-all cursor-pointer group flex items-center justify-between gap-2 shadow-sm"
+                >
+                  <div className="space-y-1 min-w-0">
+                    <div className="flex items-center gap-1.5 font-mono text-[9px]">
+                      <span className="px-1.5 py-0.2 rounded-full bg-white/10 text-cyan-300 font-bold uppercase border border-white/15">
+                        {q.lang}
+                      </span>
+                      <span className="text-white/40">{q.category}</span>
+                      <span className="text-white/70 font-bold truncate">• {q.label}</span>
+                    </div>
+                    <p className="text-xs text-white/90 font-sans truncate group-hover:text-white transition-colors">
+                      {q.text}
+                    </p>
+                  </div>
+
+                  <div className="w-7 h-7 rounded-full bg-white/5 group-hover:bg-white text-white/40 group-hover:text-black flex items-center justify-center transition-all shrink-0 border border-white/10 group-hover:border-white shadow-sm">
+                    <ArrowRight className="w-3 h-3" />
+                  </div>
+                </div>
+              ))}
+
+              {filteredExpandedQuestions.length === 0 && (
+                <div className="col-span-full py-8 text-center text-xs font-mono text-white/40">
+                  No questions match the selected filters.
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* 5. Collapsible Hardware Specs Toggle */}
@@ -474,13 +586,6 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
           />
         </div>
       )}
-
-      {/* 7. Benchmark Modal Library */}
-      <FlowBenchmarkModal
-        isOpen={isBenchmarkModalOpen}
-        onClose={() => setIsBenchmarkModalOpen(false)}
-        onSelectPrompt={handleSelectSample}
-      />
     </div>
   );
 };
