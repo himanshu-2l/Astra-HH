@@ -393,19 +393,19 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
 
       {/* 4. In-Page Smooth Expandable Benchmark Section */}
       <div className="w-full max-w-2xl space-y-2.5 transition-all duration-500">
-        <div className="flex items-center justify-between text-[10px] font-mono text-white/50 px-2">
+        <div className="flex items-center justify-between text-[10px] font-mono text-white/60 px-2">
           <span className="flex items-center gap-1.5">
-            <Sparkles className="w-3 h-3 text-cyan-400" />
-            <span>Instant Benchmark Questions</span>
+            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+            <span className="text-white/80 font-bold uppercase tracking-wider">Instant Benchmark Questions</span>
           </span>
 
           <div className="flex items-center gap-3">
             <button
               onClick={() => setIsExpandedBenchmarks(!isExpandedBenchmarks)}
-              className="flex items-center gap-1 text-cyan-300 hover:text-white transition-colors cursor-pointer font-bold bg-white/10 hover:bg-white/15 px-2.5 py-1 rounded-full border border-white/15 shadow-sm"
+              className="flex items-center gap-1.5 text-cyan-300 hover:text-white transition-all cursor-pointer font-bold bg-[#070c18]/90 hover:bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700/80 shadow-md"
               title="Expand full benchmark grid directly on page"
             >
-              <LayoutGrid className="w-3 h-3 text-cyan-400" />
+              <LayoutGrid className="w-3.5 h-3.5 text-cyan-400" />
               <span>{isExpandedBenchmarks ? 'collapse' : 'browse all (18)'}</span>
               {isExpandedBenchmarks ? (
                 <ChevronUp className="w-3 h-3" />
@@ -416,7 +416,7 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
 
             <button
               onClick={handleReplayIntro}
-              className="flex items-center gap-1 hover:text-white text-white/40 transition-colors cursor-pointer"
+              className="flex items-center gap-1 hover:text-white text-white/50 transition-colors cursor-pointer"
             >
               <RotateCcw className="w-3 h-3" />
               <span>replay</span>
@@ -439,26 +439,26 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
                   key={idx}
                   onClick={() => handleSelectSample(sample.text, sample.lang)}
                   disabled={isLoading}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#060b19]/80 hover:bg-[#060b19] backdrop-blur-xl border border-white/15 hover:border-white/40 text-white/80 hover:text-white text-xs font-mono whitespace-nowrap shrink-0 transition-all cursor-pointer shadow-md hover:scale-105 group"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#070c18]/90 hover:bg-slate-800 backdrop-blur-xl border border-slate-700/80 hover:border-cyan-400/50 text-white/90 hover:text-white text-xs font-mono whitespace-nowrap shrink-0 transition-all cursor-pointer shadow-md hover:scale-105 group"
                 >
-                  <span className="text-[9px] uppercase font-bold text-cyan-300 px-1 py-0.2 rounded bg-white/10">
+                  <span className="text-[9px] uppercase font-bold text-cyan-300 px-1.5 py-0.2 rounded bg-cyan-950/80 border border-cyan-500/40">
                     {sample.lang}
                   </span>
-                  <span className="text-white/90 group-hover:text-white">{sample.label}</span>
+                  <span className="text-slate-200 group-hover:text-white font-medium">{sample.label}</span>
                 </button>
               ))}
             </div>
           </div>
         )}
 
-        {/* Expanded Mode: In-Page 2-Column Frosted Grid (Zero Popup Windows) */}
+        {/* Expanded Mode: High-Contrast Solid Obsidian 2-Column Grid */}
         {isExpandedBenchmarks && (
-          <div className="w-full rounded-3xl bg-[#070c18]/92 backdrop-blur-2xl border border-white/15 p-4 sm:p-5 shadow-[0_20px_50px_rgba(0,0,0,0.9)] space-y-3.5 text-left animate-fadeIn">
+          <div className="w-full rounded-3xl bg-[#060a14]/98 backdrop-blur-3xl border border-slate-700/80 p-5 sm:p-6 shadow-[0_25px_60px_rgba(0,0,0,0.95)] space-y-4 text-left animate-fadeIn">
             {/* Filter Strips */}
-            <div className="space-y-2 border-b border-white/10 pb-3 font-mono text-xs">
+            <div className="space-y-2.5 border-b border-slate-700/80 pb-3.5 font-mono text-xs">
               {/* Language Filters */}
               <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5">
-                <Globe className="w-3.5 h-3.5 text-white/40 shrink-0 mr-1" />
+                <Globe className="w-3.5 h-3.5 text-slate-400 shrink-0 mr-1" />
                 {langFilters.map((lf) => {
                   const isActive = benchmarkLangFilter === lf.code;
                   return (
@@ -467,8 +467,8 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
                       onClick={() => setBenchmarkLangFilter(lf.code)}
                       className={`px-3 py-1 rounded-full text-xs font-mono transition-all shrink-0 cursor-pointer ${
                         isActive
-                          ? 'bg-white text-black font-bold shadow-[0_0_15px_rgba(255,255,255,0.4)] scale-105'
-                          : 'bg-white/[0.06] hover:bg-white/15 text-white/70 hover:text-white border border-white/10'
+                          ? 'bg-cyan-400 text-black font-bold shadow-[0_0_12px_rgba(6,182,212,0.4)] scale-105 border border-cyan-300'
+                          : 'bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/70'
                       }`}
                     >
                       {lf.name}
@@ -479,7 +479,7 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
 
               {/* Category Filters */}
               <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
-                <Sparkles className="w-3.5 h-3.5 text-cyan-400 shrink-0 mr-1" />
+                <Sparkles className="w-3.5 h-3.5 text-purple-400 shrink-0 mr-1" />
                 {categories.map((cat) => {
                   const isActive = benchmarkCategoryFilter === cat;
                   return (
@@ -488,8 +488,8 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
                       onClick={() => setBenchmarkCategoryFilter(cat)}
                       className={`px-3 py-1 rounded-full text-xs font-mono transition-all shrink-0 cursor-pointer ${
                         isActive
-                          ? 'bg-white text-black font-bold shadow-[0_0_15px_rgba(255,255,255,0.4)] scale-105'
-                          : 'bg-white/[0.06] hover:bg-white/15 text-white/60 hover:text-white border border-white/10'
+                          ? 'bg-purple-600 text-white font-bold shadow-[0_0_12px_rgba(168,85,247,0.4)] scale-105 border border-purple-400'
+                          : 'bg-slate-900/90 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-700/70'
                       }`}
                     >
                       {cat}
@@ -499,37 +499,37 @@ export const FlowHero: React.FC<FlowHeroProps> = ({
               </div>
             </div>
 
-            {/* 2-Column Prompt Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-72 overflow-y-auto no-scrollbar pr-0.5">
+            {/* 2-Column High-Contrast Prompt Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-72 overflow-y-auto no-scrollbar pr-0.5">
               {filteredExpandedQuestions.map((q, idx) => (
                 <div
                   key={idx}
                   onClick={() => {
                     handleSelectSample(q.text, q.lang);
                   }}
-                  className="p-3 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-white/30 transition-all cursor-pointer group flex items-center justify-between gap-2 shadow-sm"
+                  className="p-3.5 rounded-2xl bg-slate-900/90 hover:bg-slate-850 border border-slate-700/70 hover:border-cyan-400/60 transition-all cursor-pointer group flex items-center justify-between gap-3 shadow-md"
                 >
-                  <div className="space-y-1 min-w-0">
-                    <div className="flex items-center gap-1.5 font-mono text-[9px]">
-                      <span className="px-1.5 py-0.2 rounded-full bg-white/10 text-cyan-300 font-bold uppercase border border-white/15">
+                  <div className="space-y-1.5 min-w-0 flex-1">
+                    <div className="flex items-center gap-2 font-mono text-[10px]">
+                      <span className="px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 font-bold uppercase border border-cyan-500/50 shadow-sm">
                         {q.lang}
                       </span>
-                      <span className="text-white/40">{q.category}</span>
-                      <span className="text-white/70 font-bold truncate">• {q.label}</span>
+                      <span className="text-cyan-400 font-semibold">{q.category}</span>
+                      <span className="text-slate-300 font-bold truncate">• {q.label}</span>
                     </div>
-                    <p className="text-xs text-white/90 font-sans truncate group-hover:text-white transition-colors">
+                    <p className="text-xs sm:text-sm text-white font-sans font-medium leading-snug truncate group-hover:text-cyan-200 transition-colors">
                       {q.text}
                     </p>
                   </div>
 
-                  <div className="w-7 h-7 rounded-full bg-white/5 group-hover:bg-white text-white/40 group-hover:text-black flex items-center justify-center transition-all shrink-0 border border-white/10 group-hover:border-white shadow-sm">
-                    <ArrowRight className="w-3 h-3" />
+                  <div className="w-8 h-8 rounded-full bg-slate-800 group-hover:bg-cyan-400 text-cyan-400 group-hover:text-black flex items-center justify-center transition-all shrink-0 border border-slate-700 group-hover:border-cyan-300 shadow-sm">
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </div>
                 </div>
               ))}
 
               {filteredExpandedQuestions.length === 0 && (
-                <div className="col-span-full py-8 text-center text-xs font-mono text-white/40">
+                <div className="col-span-full py-8 text-center text-xs font-mono text-slate-400">
                   No questions match the selected filters.
                 </div>
               )}
