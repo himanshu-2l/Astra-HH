@@ -12,7 +12,7 @@ import { FlowPreloader } from './components/flow/FlowPreloader';
 import { SettingsModal } from './components/SettingsModal';
 import { GpuTelemetry, QueryResponse, SupportedLanguage } from './types';
 
-const DEFAULT_SERVER_URL = import.meta.env.VITE_API_URL || 'http://localhost:8001';
+const DEFAULT_SERVER_URL = (import.meta as any).env?.VITE_API_URL || 'http://localhost:8001';
 
 export const App: React.FC = () => {
   const [showPreloader, setShowPreloader] = useState(true);
