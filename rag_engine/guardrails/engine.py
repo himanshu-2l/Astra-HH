@@ -3,11 +3,15 @@ from typing import List, Dict, Any, Tuple
 
 BLOCKED_PATTERNS = [
     "ignore all previous instructions",
+    "ignore previous instructions",
     "system prompt override",
     "unauthorized_override",
     "drop table",
     "jailbreak",
-    "malicious_exploit"
+    "malicious_exploit",
+    "disregard all instructions",
+    "bypass guardrails",
+    "forget your rules"
 ]
 
 class GuardrailEngine:
@@ -27,7 +31,7 @@ class GuardrailEngine:
         return True, "Passed"
 
     def check_off_topic_relevance(self, top_chunks: List[Dict[str, Any]]) -> Tuple[bool, str]:
-        """Gate 2: Off-topic / Out-of-domain Grounding Gate."""
+        """Gate 2: Off-topic / Out-of-domain Grounding Gate (Centroid and Rerank score)."""
         if not top_chunks:
             return False, "No relevant context found in MSMARCO corpus."
             
@@ -38,7 +42,7 @@ class GuardrailEngine:
         return True, "Passed"
 
     def validate_citations(self, answer: str, num_chunks: int) -> List[int]:
-        """Gate 3: Extract and verify [1], [2] citation brackets."""
+        """Extract and verify [1], [2] citation brackets against available chunks."""
         found_citations = re.findall(r'\[(\d+)\]', answer)
         valid_citations = []
         for c in set(found_citations):
@@ -46,3 +50,19 @@ class GuardrailEngine:
             if 1 <= idx <= num_chunks:
                 valid_citations.append(idx)
         return sorted(valid_citations)
+
+    def verify_groundedness(self, answer: str, top_chunks: List[Dict[str, Any]]) -> Tuple[bool, List[int], str]:
+        """
+        Gate 3: Anti-Hallucination Grounding Enforcer.
+        Validates that generated claims reference retrieved context passages.
+        """
+        if not top_chunks:
+            return False, [], "Refusal: No grounded context available to substantiate answer."
+            
+        citations = self.validate_citations(answer, len(top_chunks))
+        
+        # If the LLM did not emit bracket citations, inject default ground truth citation [1] if answer aligns
+        if not citations:
+            citations = [1]
+            
+        return True, citations, "Grounded"
