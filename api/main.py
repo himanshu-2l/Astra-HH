@@ -20,10 +20,19 @@ app.add_middleware(
 harness = None
 voice_pipeline = None
 
-# Mount modern React Vite production build if present
-DIST_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "frontend", "dist")
-ASSETS_DIR = os.path.join(DIST_DIR, "assets")
+# Mount modern React Vite production build
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FRONTEND_DIST = os.path.join(ROOT_DIR, "frontend", "dist")
+WEB_DIR = os.path.join(ROOT_DIR, "web")
 
+if os.path.exists(os.path.join(FRONTEND_DIST, "index.html")):
+    STATIC_DIR = FRONTEND_DIST
+elif os.path.exists(os.path.join(WEB_DIR, "index.html")):
+    STATIC_DIR = WEB_DIR
+else:
+    STATIC_DIR = ROOT_DIR
+
+ASSETS_DIR = os.path.join(STATIC_DIR, "assets")
 if os.path.exists(ASSETS_DIR):
     app.mount("/assets", StaticFiles(directory=ASSETS_DIR), name="assets")
 
@@ -39,10 +48,10 @@ async def startup_event():
 
 @app.get("/")
 async def serve_index():
-    index_file = os.path.join(DIST_DIR, "index.html")
+    index_file = os.path.join(STATIC_DIR, "index.html")
     if os.path.exists(index_file):
         return FileResponse(index_file)
-    return FileResponse("web/index.html")
+    return FileResponse(os.path.join(WEB_DIR, "index.html"))
 
 @app.post("/query")
 async def query_endpoint(req: QueryRequest):
