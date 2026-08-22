@@ -5,7 +5,6 @@
 # 🌌 ASTRA
 ### Sub-200ms Voice-Enabled Multilingual Indic RAG Engine
 
-[![Live Web App](https://img.shields.io/badge/Live%20Demo-astra--hh.vercel.app-7928CA?style=for-the-badge&logo=vercel&logoColor=white)](https://astra-hh.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.4](https://img.shields.io/badge/PyTorch-2.4%20CUDA-ee4c2c.svg)](https://pytorch.org/)
@@ -15,7 +14,7 @@
 **Hackathon Goa (HH Goa) 2026 — Round 2 Official Submission**  
 *Built for real-time voice retrieval across Indian languages over the 55 GB `ai4bharat/MSMARCO-XI` dataset.*
 
-[Live Demo](https://astra-hh.vercel.app) • [Overview](#-executive-summary) • [Benchmarks](#-audited-performance-benchmarks) • [Architecture](#-system-architecture) • [Chunking Innovations](#-the-5-strategy-indic-chunking-innovations) • [Voice Studio](#-multilingual-voice-studio--tts-engine) • [Guardrails](#-3-gate-anti-hallucination-guardrail-engine) • [Quickstart](#-reproducibility--quickstart)
+[Overview](#-executive-summary) • [Benchmarks](#-audited-performance-benchmarks) • [Architecture](#-system-architecture) • [Chunking Innovations](#-the-5-strategy-indic-chunking-innovations) • [Voice Studio](#-multilingual-voice-studio--tts-engine) • [Guardrails](#-3-gate-anti-hallucination-guardrail-engine) • [Quickstart](#-reproducibility--quickstart)
 
 ---
 
