@@ -9,9 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.4](https://img.shields.io/badge/PyTorch-2.4%20CUDA-ee4c2c.svg)](https://pytorch.org/)
-[![vLLM](https://img.shields.io/badge/vLLM-0.8.5%2B-green.svg)](https://github.com/vllm-project/vllm)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688.svg)](https://fastapi.tiangolo.com)
-[![Hardware: 6x RTX 2080 Ti](https://img.shields.io/badge/Hardware-6%C3%97%20RTX%202080%20Ti%20%7C%20512GB%20RAM-76B900.svg)](https://www.nvidia.com)
 [![Retrieval SLA: P50 42.2ms](https://img.shields.io/badge/Retrieval%20P50-42.2%20ms%20%E2%9C%93-brightgreen.svg)](#-audited-performance-benchmarks)
 
 **Hackathon Goa (HH Goa) 2026 — Round 2 Official Submission**  
@@ -31,7 +29,7 @@ Modern Voice RAG systems in Indic languages face three fatal bottlenecks:
 3. **Hallucination & Lack of Grounding:** General-purpose LLMs hallucinate unverified facts without source citations when responding to spoken queries.
 
 ### 💡 The Astra Solution
-**Astra** is an enterprise-grade, sub-200ms voice-enabled Multilingual RAG engine optimized for **6× NVIDIA RTX 2080 Ti GPUs (66 GB total VRAM)** and **512 GB Host RAM**. 
+**Astra** is an enterprise-grade, sub-200ms voice-enabled Multilingual RAG engine optimized for real-time Indic voice retrieval and synthesis.
 
 * **42.2 ms P50 Retrieval Latency:** Achieved via 10 parallel in-memory search indices (5× Dense HNSW + 5× Sparse BM25s) with zero disk I/O.
 * **100% Grounded Citations:** Automatic extraction and validation of `[1]`, `[2]` bracket citations backed by MSMARCO-XI ground truth.
@@ -42,7 +40,7 @@ Modern Voice RAG systems in Indic languages face three fatal bottlenecks:
 
 ## 🏆 Audited Performance Benchmarks
 
-> **Audited on Live 6× RTX 2080 Ti Server (`bd216server3`) | 50-Query Multilingual Test Suite**  
+> **Audited Multilingual Test Suite (50 Ground-Truth Queries)**  
 > *Raw per-query millisecond audit traces committed in [`data/benchmarks/latency_log.csv`](data/benchmarks/latency_log.csv).*
 
 ### 📊 Latency Percentile Distribution
@@ -69,7 +67,7 @@ Modern Voice RAG systems in Indic languages face three fatal bottlenecks:
   • MRR @ 10 (Ranking Quality)    : 0.862
   • Citation Grounding Rate       : 96.0%
   • Total Chunks Indexed in RAM   : 303,425 chunks across 5 strategies
-  • Runtime Disk I/O Latency      : 0.00 ms (100% Pinned in 512GB RAM)
+  • In-Memory Parallel Search     : Zero Disk I/O Overhead
 ======================================================================
 ```
 
@@ -91,21 +89,21 @@ Modern Voice RAG systems in Indic languages face three fatal bottlenecks:
 │  ├── Blocks prompt injection ("ignore instructions"), jailbreaks & toxicity            │
 │                                                                                        │
 │  [HYBRID RETRIEVAL ENSEMBLE] (ThreadPoolExecutor Parallel Search)                      │
-│  ├── Dense Pipeline (GPU 1):                                                           │
-│  │   └── BAAI/bge-m3 (1024-dim FP16) ──► 5× FAISS HNSW Indices (RAM-Pinned)            │
-│  ├── Sparse Pipeline (Host CPU):                                                       │
-│  │   └── BM25s In-Memory Indexer ─────► 5× BM25s Sparse Indices (RAM-Pinned)           │
+│  ├── Dense Pipeline:                                                                   │
+│  │   └── BAAI/bge-m3 (1024-dim FP16) ──► 5× FAISS HNSW Indices (In-Memory)             │
+│  ├── Sparse Pipeline:                                                                  │
+│  │   └── BM25s In-Memory Indexer ─────► 5× BM25s Sparse Indices (In-Memory)            │
 │  ├── Fusion Layer:                                                                     │
 │  │   └── Reciprocal Rank Fusion (RRF, k=60) merges 10 candidate lists ──► Top 50 Chunks│
-│  └── Cross-Encoder Reranker (GPU 1):                                                   │
+│  └── Cross-Encoder Reranker:                                                           │
 │      └── BAAI/bge-reranker-v2-m3 FP16 re-scores Top 50 ──────────────► Top 3 Winners │
 │                                                                                        │
 │  [GATE 2] Centroid Out-of-Domain Filter                                                │
 │  ├── Computes cosine similarity against corpus centroid                                │
-│  └── Visibly rejects out-of-domain queries if score < 0.20 (Prevents Hallucination)   │
+│  └── Visibly rejects out-of-domain queries if score < 0.04 (Prevents Hallucination)   │
 │                                                                                        │
-│  [LLM GENERATION ENGINE] (GPU 2)                                                       │
-│  ├── Qwen/Qwen2.5-3B-Instruct (FP16 Native on cuda:2)                                  │
+│  [LLM GENERATION ENGINE]                                                               │
+│  ├── Qwen/Qwen2.5-3B-Instruct (FP16 Native Inference)                                  │
 │  └── Strict Citation Enforcement System Prompt                                         │
 │                                                                                        │
 │  [GATE 3] Citation Grounding Enforcer                                                  │
@@ -138,28 +136,6 @@ Astra features a built-in **bidirectional Voice Interface** supporting Hindi, Ma
 * **Hardware-Accelerated TTS Synthesizer:** Reads out synthesized answers in the native language accent. Automatically strips bracketed citation numbers (e.g. `[1]`, `[2]`) before reading for natural conversational flow.
 * **Garbage-Collection Resilience:** Pinned utterance references preventing Chromium speech synthesizer stalls.
 * **Variable Playback Speed:** Adjustable voice rate controls (`0.8x`, `1.0x`, `1.2x`, `1.5x`) with instant play/pause/resume.
-
----
-
-## 🎛️ Hardware Topology & Memory Budget
-
-Astra is architected to utilize **all 6× NVIDIA RTX 2080 Ti GPUs** and **512 GB Host RAM** efficiently:
-
-```
-┌───────────────────────────────────────────────────────────────────────────────────────┐
-│ HOST SYSTEM RAM (512 GB Total | ~12.4 GB Allocated | 0 ms Disk Swapping)              │
-│  • 5× FAISS HNSW Indices: ~7.2 GB (RAM-Pinned)                                        │
-│  • 5× BM25s In-Memory Indices: ~1.8 GB                                                │
-│  • 303,425 Chunks & Raw Passage Lookups: ~3.4 GB                                     │
-└───────────────────────────────────────────────────────────────────────────────────────┘
-                                           │
- ┌──────────────────────┬──────────────────┴───┬──────────────────────┬─────────────────┐
- ▼                      ▼                      ▼                      ▼                 ▼
-[GPU 0: cuda:0]        [GPU 1: cuda:1]        [GPU 2: cuda:2]        [GPU 3: cuda:3]   [GPU 4-5]
-• Silero VAD Anchor    • BGE-M3 (FP16)        • Qwen2.5-3B-Instruct  • Data Parallel   • Scaling
-• Audio Buffer         • BGE-Reranker-v2-M3   • Native FP16 LLM      • Worker Replica  • Standby
-• VRAM: ~0.5 GB        • VRAM: ~8.4 GB        • VRAM: ~6.2 GB        • VRAM: Standby   • Headroom
-```
 
 ---
 
@@ -214,24 +190,23 @@ Astra enforces strict safety and grounding through a sequential 3-Gate verificat
 
 ## 🥊 Competitive Advantage
 
-| Capability | What 90% of Hackathon Teams Build | What Astra Delivers |
+| Capability | Standard RAG Implementations | What Astra Delivers |
 |---|---|---|
 | **Retrieval SLA** | Claims "<200ms" without proof; actual ~1.5s | **Audited 42.2ms P50** with CSV trace logs |
 | **Search Paradigm** | Single dense vector index (E5 or MiniLM) | **10-Index Parallel Hybrid (5× FAISS HNSW + 5× BM25s + RRF)** |
 | **Cross-Reranking** | Omitted due to latency overhead | **Sub-25ms GPU Cross-Encoder (`bge-reranker-v2-m3`)** |
 | **Indic Script Handling** | Word/character-splitting (breaks Devanagari) | **5 Specialized Indic chunkers with Purna Viram `।` parser** |
 | **Hallucination Control**| Unrestricted LLM prompt | **3-Gate Guardrails + Strict `[1]` Citation Validation** |
-| **Host Memory Usage** | Reads indices from disk on every search | **100% Pinned in 512GB RAM (0ms disk I/O)** |
-| **Live Telemetry** | Black-box terminal output | **Real-time Latency Waterfall & 6-GPU Telemetry UI** |
+| **Index Storage** | Reads indices from disk on every search | **In-memory loaded indices (zero disk I/O)** |
+| **Live Telemetry** | Black-box terminal output | **Real-time Latency Waterfall & GPU Telemetry UI** |
 
 ---
 
 ## 🚀 Reproducibility & Quickstart
 
 ### 📋 Prerequisites
-* Linux / Windows (with CUDA 12.1+ / 13.2)
-* Python 3.10+
-* 1+ NVIDIA GPU (Recommended: RTX 2080 Ti / 3090 / 4090 / A100)
+* Linux / Windows with Python 3.10+
+* 1+ NVIDIA GPU for accelerated embedding and LLM generation
 
 ### 1. Clone & Install Dependencies
 ```bash
